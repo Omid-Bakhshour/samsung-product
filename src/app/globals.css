@@ -11,3 +11,7 @@
     src: url('/fonts/samsung-app.woff') format('woff');
   }
 }
+
+body {
+  @apply !font-samsung;
+}
