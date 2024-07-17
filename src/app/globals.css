@@ -15,3 +15,16 @@
 body {
   @apply !font-samsung;
 }
+
+
+@layer components {
+  .header-icon_container {
+    @apply inline-flex items-center justify-start h-full relative
+
+  }
+
+  .header-icon_container .icon-padding {
+    @apply p-2 xl:p-[0.5555556vw]
+
+  }
+}

@@ -4,7 +4,7 @@ import MenuItem from './MenuItem'
 
 function Menu() {
   return (
-    <div className='w-full flex flex-1 items-center justify-between relative h-full ' >
+    <div className='w-full  flex-1 items-center justify-between relative h-full hidden xl:flex' >
         {/* left menu */}
         <ul className='flex items-center h-full' >
             {
