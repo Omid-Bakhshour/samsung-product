@@ -52,7 +52,7 @@ export const otherMenu = [
     },
 ]
 
-const menu = [
+export const mobileMenu = [
   {
     title: "categoryMenu",
     children: left_menu
