@@ -6,13 +6,13 @@ export type MenuType = {
 
 export type MenuChildItemType = {
     title: string
-    link?: string
+    link: string
     children?: Omit<MenuChildItemType, 'children'>
 }
 
 export type MenuItemType = {
     title: string
-    link?: string
+    link: string
     children?: MenuChildItemType[]
 }
 

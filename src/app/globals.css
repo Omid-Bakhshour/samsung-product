@@ -41,9 +41,14 @@ a {
   }
 
   .menu-link {
-    @apply px-6 font-[16px] text-black hover:font-bold w-full flex items-center justify-start leading-10
+    @apply px-6 text-[16px] text-black hover:font-bold w-full flex items-center justify-start leading-10
   }
   .menu-line {
     @apply relative after:absolute after:bottom-4 after:left-6 after:right-6 after:h-[1px] after:bg-black after:opacity-20 after:block
   }
+
+  .menu-item_btn {
+    @apply  !py-0 !px-6 justify-between
+  }
+
 }
