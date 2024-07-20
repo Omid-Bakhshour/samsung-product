@@ -1,11 +1,15 @@
+import { RootState } from '@/redux/store';
 import Link from 'next/link'
 import React from 'react'
 import { FaAngleRight as RightIcon } from "react-icons/fa6";
+import { useSelector } from 'react-redux';
 
 
 function Authentication() {
+    const activeMenu = useSelector((state: RootState) => state.menu.activeMenu)
+    const isMenuActive = activeMenu && activeMenu.length > 0
     return (
-        <div className='w-full pt-4 pb-8 flex flex-col menu-line' >
+        <div className={`w-full pt-4 pb-8 flex flex-col menu-line relative transition-all transform duration-300 ease-in-out ${isMenuActive ? "right-full opacity-0" : "right-0"}`} >
             {/* login */}
             <Link
                 href={'/'}

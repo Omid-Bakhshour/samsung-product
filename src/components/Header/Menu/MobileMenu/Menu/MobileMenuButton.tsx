@@ -28,7 +28,7 @@ function MobileMenuButton({menuItem}: Props) {
         <RightIcon className='w-4 h-4' />
       </button>
 
-      <div className={`w-[360px] fixed top-16 flex pb-6 z-[12] left-auto flex-col bottom-0 bg-black  ${isMenuActive ? "right-0" : "-right-full"}`}>
+      <div className={`w-[360px] fixed top-16 flex pb-6 z-[12] left-auto flex-col bottom-0 bg-white transition-all transform duration-300 ease-in-out  ${isMenuActive ? "right-0" : "-right-full"}`}>
 
       </div>
     </li>
