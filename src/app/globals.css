@@ -6,14 +6,22 @@
   @font-face {
     font-family: 'samsung';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 00;
     font-display: swap;
-    src: url('/fonts/samsung-app.woff') format('woff');
-  }
+    src: url('/fonts/samsung-app.woff2') format('woff2'),
+         url('/fonts/samsung-app.woff') format('woff'),
+         url('/fonts/samsung-app.ttf') format('truetype');  }
 }
 
 body {
   @apply !font-samsung;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 
@@ -30,5 +38,12 @@ body {
 
   .t-menu_button {
     @apply w-10 h-10 block p-2
+  }
+
+  .menu-link {
+    @apply px-6 font-[16px] text-black hover:font-bold w-full flex items-center justify-start leading-10
+  }
+  .menu-line {
+    @apply relative after:absolute after:bottom-4 after:left-6 after:right-6 after:h-[1px] after:bg-black after:opacity-20 after:block
   }
 }

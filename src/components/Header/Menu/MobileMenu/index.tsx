@@ -1,6 +1,7 @@
 import ModalBackground from '@/components/Common/ModalBackground'
 import React from 'react'
 import TopMenu from './TopMenu'
+import Authentication from './Authentication'
 
 function MobileMenu() {
   return (
@@ -10,6 +11,7 @@ function MobileMenu() {
         {/* topMenu */}
         <TopMenu/>
         {/* login signup */}
+        <Authentication/>
         {/* menu */}
       </div>
 
