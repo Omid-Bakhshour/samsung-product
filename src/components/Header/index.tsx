@@ -5,6 +5,7 @@ import React from 'react'
 import LogoIcon from '@/icons/SamsungIcon.svg'
 import Menu from './Menu'
 import ActionButtons from './ActionButtons'
+import MobileMenu from './Menu/MobileMenu'
 
 
 function Header() {
@@ -24,6 +25,8 @@ function Header() {
                 <Menu />
                 {/* right side icons */}
                 <ActionButtons/>
+                {/* mobile menu */}
+                <MobileMenu/>
             </div>
         </nav>
     )

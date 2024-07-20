@@ -35,5 +35,34 @@ export const right_menu = [
     {
         title: "For Business"
     },
+]
 
+export const otherMenu = [
+    {
+        title: "Track Your Order"
+    },
+    {
+        title: "Product Registration"
+    },
+    {
+        title: "Samsung Rewards"
+    },
+    {
+        title: "Members"
+    },
+]
+
+const menu = [
+  {
+    title: "categoryMenu",
+    children: left_menu
+  },
+  {
+    title: "support",
+    children: right_menu
+  },
+  {
+    title: "otherMenu",
+    children: otherMenu
+  },
 ]

@@ -2,6 +2,8 @@ import React from 'react'
 import { IoIosSearch } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
+import { LuMenu } from "react-icons/lu";
+
 
 
 function ActionButtons() {
@@ -26,6 +28,12 @@ function ActionButtons() {
                 </button>
             </div>
             {/* mobile menu */}
+            <div className='header-icon_container mr-2 block xl:hidden' >
+                <button className='icon-padding' >
+                    <LuMenu className='w-6 h-6 block'  />
+                </button>
+            </div>
+
 
 
         </div>
