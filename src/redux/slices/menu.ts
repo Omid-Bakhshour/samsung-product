@@ -15,7 +15,7 @@ const menu = createSlice({
         setActiveMenu: (state, action: PayloadAction<string>) => {
             return {
                 ...state,
-                isSidebarOpen: action.payload
+                activeMenu: action.payload
             }
         },
     }

@@ -1,13 +1,25 @@
+"use client"
+
+import { RootState } from '@/redux/store';
 import React from 'react'
 import { GoArrowLeft as BackIcon } from "react-icons/go";
 import { IoSearch  as SearchIcon } from "react-icons/io5";
 import { MdOutlineClose as CloseIcon } from "react-icons/md";
+import { useDispatch, useSelector } from 'react-redux';
+import { setActiveMenu } from '@/redux/slices/menu'
+
 
 function TopMenu() {
+  const dispatch = useDispatch()
+  const activeMenu = useSelector((state: RootState) => state.menu.activeMenu)
+  const isMenuActive = activeMenu && activeMenu.length > 0
   return (
     <div className='w-full h-14 flex items-center px-2 py-4' >
         {/* back button */}
-        <button className='t-menu_button' >
+        <button 
+            className={`t-menu_button ${isMenuActive ? "block" : "hidden"}`}
+            onClick={() =>  dispatch(setActiveMenu(""))}
+        >
             <BackIcon className='w-7 h-7' />
         </button>
         {/* search */}

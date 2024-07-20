@@ -10,7 +10,7 @@ function Menu() {
             {
                 left_menu.map((menu) => {
                     return (
-                        <MenuItem menu={menu} />
+                        <MenuItem key={menu.id} menu={menu} />
                     )
                 })
             }
@@ -20,7 +20,7 @@ function Menu() {
             {
                 right_menu.map((menu) => {
                     return (
-                        <MenuItem menu={menu} />
+                        <MenuItem key={menu.id} menu={menu} />
                     )
                 })
             }
