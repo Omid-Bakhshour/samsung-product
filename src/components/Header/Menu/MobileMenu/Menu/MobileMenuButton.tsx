@@ -9,10 +9,12 @@ type Props = {
 function MobileMenuButton({menuItem}: Props) {
   return (
     <li className='w-full flex'>
+      {/* button */}
       <button className='menu-link menu-item_btn' >
         <span>{menuItem.title}</span>
         <RightIcon className='w-4 h-4' />
       </button>
+      
     </li>
   )
 }
