@@ -30,25 +30,31 @@ a {
     @apply inline-flex items-center justify-start h-full relative
 
   }
-
   .header-icon_container .icon-padding {
     @apply p-2 xl:p-[0.5555556vw]
 
   }
-
   .t-menu_button {
     @apply w-10 h-10 block p-2
   }
-
   .menu-link {
     @apply px-6 text-[16px] text-black hover:font-bold w-full flex items-center justify-start leading-10
   }
   .menu-line {
     @apply relative after:absolute after:bottom-4 after:left-6 after:right-6 after:h-[1px] after:bg-black after:opacity-20 after:block
   }
-
   .menu-item_btn {
     @apply  !py-0 !px-6 justify-between
   }
-
 }
+
+.menu-right_animation {
+  -webkit-transition: right .3s cubic-bezier(0.6,0,0.4,1);
+  transition: right .3s cubic-bezier(0.6,0,0.4,1);
+}
+
+.menu-opacity_animation {
+  -webkit-transition: opacity .3s cubic-bezier(0.6,0,0.4,1);
+  transition: opacity .3s cubic-bezier(0.6,0,0.4,1);
+}
+

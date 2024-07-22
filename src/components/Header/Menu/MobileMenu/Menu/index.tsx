@@ -2,10 +2,14 @@ import { mobileMenu } from '@/constants/Menu'
 import React from 'react'
 import { MobileMenuType } from '@/models/Menu'
 import MobileMenuItem from './MobileMenuItem'
+import { useSelector } from 'react-redux'
+import { RootState } from '@/redux/store'
 
 function Menu() {
+    const isSecondryMenuActive = useSelector((state: RootState) => state.menu.isSecondryMenuActive)
+
     return (
-        <div className='w-full flex flex-col'>
+        <div className={`w-full flex flex-col menu-right_animation relative ${isSecondryMenuActive ? "right-full" : "right-0"}`}>
             {
                 mobileMenu.map((menuItems: MobileMenuType, index) => {
                     const isLastMenuItem = index === mobileMenu.length - 1;

@@ -6,10 +6,10 @@ import { useSelector } from 'react-redux';
 
 
 function Authentication() {
-    const activeMenu = useSelector((state: RootState) => state.menu.activeMenu)
-    const isMenuActive = activeMenu && activeMenu.length > 0
+    const isSecondryMenuActive = useSelector((state: RootState) => state.menu.isSecondryMenuActive)
+
     return (
-        <div className={`w-full pt-4 pb-8 flex flex-col menu-line relative transition-all transform duration-300 ease-in-out ${isMenuActive ? "right-full opacity-0" : "right-0"}`} >
+        <div className={`w-full pt-4 pb-8 flex flex-col menu-line relative menu-animation ${isSecondryMenuActive ? "right-full opacity-0" : "right-0"}`} >
             {/* login */}
             <Link
                 href={'/'}
