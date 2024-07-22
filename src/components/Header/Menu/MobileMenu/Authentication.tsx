@@ -9,12 +9,11 @@ function Authentication() {
     const isSecondryMenuActive = useSelector((state: RootState) => state.menu.isSecondryMenuActive)
 
     return (
-        <div className={`w-full pt-4 pb-8 flex flex-col menu-line relative menu-animation ${isSecondryMenuActive ? "right-full opacity-0" : "right-0"}`} >
+        <div className={`w-full pt-4 pb-8 flex flex-col menu-line relative menu-right_opacity_animation  ${isSecondryMenuActive ? "right-full opacity-0" : "right-0"}`} >
             {/* login */}
             <Link
                 href={'/'}
                 className='menu-link'
-
             >
                 Log-in/Sign Up
             </Link>

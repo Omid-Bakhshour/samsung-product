@@ -6,9 +6,9 @@ import Menu from './Menu'
 
 function MobileMenu() {
   return (
-    <div className='flex flex-col relative' >
+    <div>
       {/* mobileMenu */}
-      <div className='w-[360px] fixed z-[10] top-0 bottom-0 right-0 bg-white' >
+      <div className='w-[360px] fixed z-[10] top-0 bottom-0 right-0 bg-white overflow-x-hidden' >
         {/* topMenu */}
         <TopMenu/>
         {/* login signup */}

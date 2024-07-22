@@ -35,7 +35,7 @@ a {
 
   }
   .t-menu_button {
-    @apply w-10 h-10 block p-2
+    @apply w-10 h-10 flex items-center justify-center p-2
   }
   .menu-link {
     @apply px-6 text-[16px] text-black hover:font-bold w-full flex items-center justify-start leading-10
@@ -52,9 +52,28 @@ a {
   -webkit-transition: right .3s cubic-bezier(0.6,0,0.4,1);
   transition: right .3s cubic-bezier(0.6,0,0.4,1);
 }
-
 .menu-opacity_animation {
   -webkit-transition: opacity .3s cubic-bezier(0.6,0,0.4,1);
   transition: opacity .3s cubic-bezier(0.6,0,0.4,1);
 }
+.menu-right_opacity_animation {
+  -webkit-transition: opacity .3s cubic-bezier(0.6,0,0.4,1), right .3s cubic-bezier(0.6,0,0.4,1);
+  transition: opacity .3s cubic-bezier(0.6,0,0.4,1), right .3s cubic-bezier(0.6,0,0.4,1);
+}
+.menu-width_animation {
+  -webkit-transition: width .3s cubic-bezier(0.6,0,0.4,1), margin-left .3s cubic-bezier(0.6,0,0.4,1), margin-right .3s cubic-bezier(0.6,0,0.4,1);
+  transition: width .3s cubic-bezier(0.6,0,0.4,1), margin-left .3s cubic-bezier(0.6,0,0.4,1), margin-right .3s cubic-bezier(0.6,0,0.4,1);
+}
+.menu-width_animation {
+  -webkit-transition: width .3s cubic-bezier(0.6,0,0.4,1), margin-left .3s cubic-bezier(0.6,0,0.4,1), margin-right .3s cubic-bezier(0.6,0,0.4,1);
+  transition: width .3s cubic-bezier(0.6,0,0.4,1), margin-left .3s cubic-bezier(0.6,0,0.4,1), margin-right .3s cubic-bezier(0.6,0,0.4,1);
+}
+.menu-opacity_visibility_animation {
+  -webkit-transition: opacity .3s cubic-bezier(0.6,0,0.4,1) .2s, visibility .3s cubic-bezier(0.6,0,0.4,1) .2s;
+  transition: opacity .3s cubic-bezier(0.6,0,0.4,1) .2s, visibility .3s cubic-bezier(0.6,0,0.4,1) .2s;
+}
+
+
+
+
 

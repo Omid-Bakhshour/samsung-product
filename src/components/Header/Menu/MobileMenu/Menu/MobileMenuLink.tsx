@@ -4,11 +4,15 @@ import React from 'react'
 
 type Props = {
   menuItem: Omit<MenuItemType, 'children'>
+  classname?: string
 }
 
-function MobileLink({menuItem}: Props) {
+function MobileLink({
+  menuItem,
+  classname = ""
+}: Props) {
   return (
-    <li className='w-full block'>
+    <li className={`w-full block menu-opacity_animation ${classname}`}>
       <Link
           href={menuItem.link}
           className='menu-link'

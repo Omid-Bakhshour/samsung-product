@@ -14,18 +14,17 @@ function TopMenu() {
   const isSecondryMenuActive = useSelector((state: RootState) => state.menu.isSecondryMenuActive)
 
   return (
-    <div className='w-full h-14 flex items-center px-2 py-4' >
+    <div className='w-full h-14 flex items-center px-2 py-4 relative justify-end' >
         {/* back button */}
         <button 
-            className={`t-menu_button ${isSecondryMenuActive ? "block" : "hidden"}`}
+            className={`t-menu_button absolute top-2 left-2 block menu-opacity_visibility_animation  ${isSecondryMenuActive ? "visible opacity-100" : "invisible opacity-0"}`}
             onClick={() =>  dispatch(setSecondryMenuId(""))}
         >
             <BackIcon className='w-7 h-7' />
         </button>
         {/* search */}
-        <button className='w-full flex px-3 py-4 rounded-full bg-[#f7f7f7] h-10 items-center' >
+        <button className={`flex px-3 py-4 rounded-full bg-[#f7f7f7] h-10 items-center menu-width_animation w-full z-[1] ${isSecondryMenuActive ? " ml-10" : ""}`} >
             <SearchIcon className='w-4 h-4' />
-
         </button>
         {/* close button */}
         <button className='t-menu_button' >

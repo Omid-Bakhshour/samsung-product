@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setSecondryMenuId, } from '@/redux/slices/menu'
 
 type Props = {
-  menuItem: MenuItemType
+  menuItem: MenuItemType,
 }
 
 function MobileMenuButton({menuItem}: Props) {
