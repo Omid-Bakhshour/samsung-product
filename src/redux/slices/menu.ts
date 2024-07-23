@@ -4,12 +4,16 @@ import { RootState } from '../store'
 export type menuStateType = {
     secondaryMenuId: string
     isSecondaryMenuActive: boolean,
+    spreadMenuId: string,
+
 
 }
 
 const initialState: menuStateType = {
     secondaryMenuId: "",
-    isSecondaryMenuActive: false
+    isSecondaryMenuActive: false,
+    spreadMenuId: "",
+
 }
 
 const menu = createSlice({
@@ -17,7 +21,7 @@ const menu = createSlice({
     initialState,
     reducers: {
         setSecondaryMenuId: (state, action: PayloadAction<string>) => {
-            const newActiveMenuId = action.payload;
+            const newActiveMenuId = action.payload
 
             return {
                 ...state,
@@ -25,8 +29,17 @@ const menu = createSlice({
                 isSecondaryMenuActive: newActiveMenuId.length > 0
             }
         },
+
+        setSpreadMenuId: (state, action: PayloadAction<string>) => {
+            const newActiveMenuId = action.payload === state.spreadMenuId ? "" : action.payload;
+
+            return {
+                ...state,
+                spreadMenuId: newActiveMenuId,
+            }
+        },
     }
 })
 
-export const { setSecondaryMenuId } = menu.actions;
+export const { setSecondaryMenuId, setSpreadMenuId } = menu.actions;
 export default menu.reducer;
