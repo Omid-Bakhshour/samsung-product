@@ -8,7 +8,7 @@ export type MenuChildItemType = {
     title: string
     link: string
     id: string
-    children?: Omit<MenuChildItemType, 'children'>
+    children?: Omit<MenuChildItemType, 'children'>[]
 }
 
 export type MenuItemType = {
