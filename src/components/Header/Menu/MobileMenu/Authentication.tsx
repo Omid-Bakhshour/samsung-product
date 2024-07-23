@@ -1,3 +1,5 @@
+"use client"
+
 import { RootState } from '@/redux/store';
 import Link from 'next/link'
 import React from 'react'
@@ -6,10 +8,10 @@ import { useSelector } from 'react-redux';
 
 
 function Authentication() {
-    const isSecondryMenuActive = useSelector((state: RootState) => state.menu.isSecondryMenuActive)
+    const isSecondaryMenuActive = useSelector((state: RootState) => state.menu.isSecondaryMenuActive)
 
     return (
-        <div className={`w-full pt-4 pb-8 flex flex-col menu-line relative menu-right_opacity_animation  ${isSecondryMenuActive ? "right-full opacity-0" : "right-0"}`} >
+        <div className={`w-full pt-4 pb-8 flex flex-col menu-line relative menu-right_opacity_animation  ${isSecondaryMenuActive ? "right-full opacity-0" : "right-0"}`} >
             {/* login */}
             <Link
                 href={'/'}

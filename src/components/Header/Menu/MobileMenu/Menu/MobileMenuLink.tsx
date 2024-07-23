@@ -12,10 +12,10 @@ function MobileLink({
   classname = ""
 }: Props) {
   return (
-    <li className={`w-full block menu-opacity_animation`}>
+    <li className={`w-full block `}>
       <Link
           href={menuItem.link}
-          className={`menu-link ${classname}`}
+          className={`menu-link menu-opacity_animation ${classname}`}
       >
         {menuItem.title}
       

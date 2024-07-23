@@ -46,6 +46,11 @@ a {
   .menu-item_btn {
     @apply  !py-0 !px-6 justify-between
   }
+  .menu-l1 {
+    @apply  py-3 pl-6 pr-14 leading-6
+  }
+
+  
 }
 
 .menu-right_animation {

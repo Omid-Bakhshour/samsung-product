@@ -1,3 +1,5 @@
+"use client"
+
 import { MenuItemType } from '@/models/Menu'
 import React from 'react'
 import MobileMenuButton from './MobileMenuButton'
@@ -10,12 +12,12 @@ type Props = {
 }
 
 function MobileMenuItem({ menuItem }: Props) {
-    const isSecondryMenuActive = useSelector((state: RootState) => state.menu.isSecondryMenuActive)
+    const isSecondaryMenuActive = useSelector((state: RootState) => state.menu.isSecondaryMenuActive)
     const isMenuHasChildren = menuItem && menuItem.children && menuItem.children.length > 0
     if (isMenuHasChildren) {
         return <MobileMenuButton menuItem={menuItem}/>
     }
-    return <MobileMenuLink menuItem={menuItem} classname={isSecondryMenuActive ? "opacity-0" : ""} />
+    return <MobileMenuLink menuItem={menuItem} classname={isSecondaryMenuActive ? "opacity-0" : ""} />
 }
 
 export default MobileMenuItem

@@ -1,17 +1,19 @@
+"use client"
+
 import { MenuItemType } from '@/models/Menu'
 import { RootState } from '@/redux/store'
 import React, { Fragment } from 'react'
 import { useSelector } from 'react-redux'
-import MobileMenuButton from '../MobileMenuButton'
 import MobileLink from '../MobileMenuLink'
+import SpreadMenu from './SpreadMenu'
 
 type Props = {
     menuItem: MenuItemType,
 }
 
-function SecondryMenu({ menuItem }: Props) {
-    const secondryMenuId = useSelector((state: RootState) => state.menu.secondryMenuId)
-    const isMenuSelected = secondryMenuId === menuItem.id
+function SecondaryMenu({ menuItem }: Props) {
+    const secondaryMenuId = useSelector((state: RootState) => state.menu.secondaryMenuId)
+    const isMenuSelected = secondaryMenuId === menuItem.id
     const children = menuItem.children
     const title = menuItem.title
 
@@ -33,12 +35,15 @@ function SecondryMenu({ menuItem }: Props) {
 
                     const isMenuHasChildren = menu && menu.children && Array.isArray(menu.children) && menu.children .length > 0
                     return isMenuHasChildren ? (
-                        <span key={menu.id}>ahdagjhad</span>
+                        <SpreadMenu 
+                            menu={menu}
+                            key={menu.id}
+                        />
                     ) : (
                         <MobileLink 
                             key={menu.id}
                             menuItem={menu}
-                            classname='py-3 pl-6 pr-14 leading-6'
+                            classname='menu-l1'
                         />
                     );
                 })}
@@ -51,4 +56,4 @@ function SecondryMenu({ menuItem }: Props) {
     )
 }
 
-export default SecondryMenu
+export default SecondaryMenu

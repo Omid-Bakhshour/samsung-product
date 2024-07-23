@@ -2,31 +2,31 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../store'
 
 export type menuStateType = {
-    secondryMenuId: string
-    isSecondryMenuActive: boolean,
+    secondaryMenuId: string
+    isSecondaryMenuActive: boolean,
 
 }
 
 const initialState: menuStateType = {
-    secondryMenuId: "",
-    isSecondryMenuActive: false
+    secondaryMenuId: "",
+    isSecondaryMenuActive: false
 }
 
 const menu = createSlice({
     name: "menu",
     initialState,
     reducers: {
-        setSecondryMenuId: (state, action: PayloadAction<string>) => {
+        setSecondaryMenuId: (state, action: PayloadAction<string>) => {
             const newActiveMenuId = action.payload;
 
             return {
                 ...state,
-                secondryMenuId: newActiveMenuId,
-                isSecondryMenuActive: newActiveMenuId.length > 0
+                secondaryMenuId: newActiveMenuId,
+                isSecondaryMenuActive: newActiveMenuId.length > 0
             }
         },
     }
 })
 
-export const { setSecondryMenuId } = menu.actions;
+export const { setSecondaryMenuId } = menu.actions;
 export default menu.reducer;
