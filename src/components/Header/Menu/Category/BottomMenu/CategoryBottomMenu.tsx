@@ -24,7 +24,7 @@ function CategoryBottomMenu({ menu }: Props) {
             >
                 {
                     hasMultiLevel && children?.map((menuItem) => {
-                        return <CategoryBottomMenuItem menuItems={menuItem.children|| []} label={menuItem.title}  />
+                        return <CategoryBottomMenuItem key={menuItem.id}  menuItems={menuItem.children|| []} label={menuItem.title}  />
                     })
                 }
 

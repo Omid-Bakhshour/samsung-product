@@ -22,7 +22,7 @@ function CategoryBottomMenuItem({ menuItems, label }: Props) {
             <ul>
                 {
                     menuItems?.map((item) => {
-                        return <MenuLink menuItem={item} classname='text-[0.83333vw] py-[0.55vw] px-[1.6666vw] leading-[1.1111111111vw]' />
+                        return <MenuLink key={item.id} menuItem={item} classname='text-[0.83333vw] py-[0.55vw] px-[1.6666vw] leading-[1.1111111111vw]' />
                     })
 
                 }
