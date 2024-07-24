@@ -32,10 +32,10 @@ function SpreadMenu({ menu }: Props) {
       {/* title */}
       <h3 className='menu-link menu-l1 relative' >
         {title}
-        <DownIcon className={`w-4 h-4  absolute top-1/2 -translate-y-1/2 right-[18px] ${isMenuActive ? "rotate-180" : ""}`} />
+        <DownIcon className={`w-4 h-4 absolute top-1/2 -translate-y-1/2 right-[18px] ${isMenuActive ? "rotate-180" : ""}`} />
       </h3>
       {/* items */}
-      <ul className={`w-full  flex-col bg-[#f7f7f7] overflow-hidden menu-height_animation flex   ${isMenuActive ? "py-3   h-full " : " h-0"} `} >
+      <ul className={`w-full flex-col bg-[#f7f7f7] overflow-hidden menu-height_animation ${isMenuActive ? "py-3 flex h-full" : " max-h-0 h-0"} `} >
         {
           items.map((menu) => {
             return (

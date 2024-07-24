@@ -27,7 +27,7 @@ a {
 
 @layer components {
   .header-icon_container {
-    @apply inline-flex items-center justify-start h-full relative
+    @apply inline-flex items-center justify-center h-full relative
 
   }
   .header-icon_container .icon-padding {

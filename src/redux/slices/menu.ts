@@ -5,6 +5,7 @@ export type menuStateType = {
     secondaryMenuId: string
     isSecondaryMenuActive: boolean,
     spreadMenuId: string,
+    isMobileMenuOpen: boolean
 
 
 }
@@ -13,6 +14,7 @@ const initialState: menuStateType = {
     secondaryMenuId: "",
     isSecondaryMenuActive: false,
     spreadMenuId: "",
+    isMobileMenuOpen: false,
 
 }
 
@@ -26,7 +28,8 @@ const menu = createSlice({
             return {
                 ...state,
                 secondaryMenuId: newActiveMenuId,
-                isSecondaryMenuActive: newActiveMenuId.length > 0
+                isSecondaryMenuActive: newActiveMenuId.length > 0,
+                spreadMenuId: "",
             }
         },
 
@@ -38,8 +41,19 @@ const menu = createSlice({
                 spreadMenuId: newActiveMenuId,
             }
         },
+        
+        setMobileMenu:(state, action: PayloadAction<boolean>) => {
+            return {
+                ...initialState,
+                isMobileMenuOpen: action.payload
+            }
+        },
+
+        resetMenu:(state) => {
+            return initialState
+        }
     }
 })
 
-export const { setSecondaryMenuId, setSpreadMenuId } = menu.actions;
+export const { setSecondaryMenuId, setSpreadMenuId, resetMenu } = menu.actions;
 export default menu.reducer;
