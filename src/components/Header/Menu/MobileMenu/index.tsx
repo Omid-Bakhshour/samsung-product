@@ -26,7 +26,7 @@ function MobileMenu() {
       </div>
       {/* background */}
       <ModalBackground
-          onClickHandler={() => dispatch(resetMenu())}
+          onClick={() => dispatch(resetMenu())}
           visible={isMobileMenuOpen === true}
       />
     </div>
