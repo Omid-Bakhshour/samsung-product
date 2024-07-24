@@ -1,13 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { RootState } from '../store'
 
 export type menuStateType = {
     secondaryMenuId: string
     isSecondaryMenuActive: boolean,
     spreadMenuId: string,
     isMobileMenuOpen: boolean
-
-
+    bottomMenuId: string
 }
 
 const initialState: menuStateType = {
@@ -15,7 +13,7 @@ const initialState: menuStateType = {
     isSecondaryMenuActive: false,
     spreadMenuId: "",
     isMobileMenuOpen: false,
-
+    bottomMenuId: "",
 }
 
 const menu = createSlice({
@@ -49,11 +47,20 @@ const menu = createSlice({
             }
         },
 
+        setBottomMenuId: (state, action: PayloadAction<string>) => {
+            const newActiveMenuId = action.payload
+
+            return {
+                ...state,
+                bottomMenuId: newActiveMenuId,
+            }
+        },
+
         resetMenu:(state) => {
             return initialState
         }
     }
 })
 
-export const { setSecondaryMenuId, setSpreadMenuId, resetMenu, setMobileMenu } = menu.actions;
+export const { setSecondaryMenuId, setSpreadMenuId, resetMenu, setMobileMenu, setBottomMenuId } = menu.actions;
 export default menu.reducer;

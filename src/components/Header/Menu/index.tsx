@@ -1,10 +1,14 @@
+"use client"
+
 import { left_menu, right_menu } from '@/constants/Menu'
 import React from 'react'
 import MenuItem from './MenuItem'
 
 function Menu() {
   return (
-    <div className='w-full  flex-1 items-center justify-between relative h-full hidden xl:flex' >
+    <div 
+        className='w-full  flex-1 items-center justify-between relative h-full hidden xl:flex' 
+    >
         {/* left menu */}
         <ul className='flex items-center h-full' >
             {

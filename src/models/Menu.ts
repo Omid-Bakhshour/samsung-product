@@ -12,6 +12,8 @@ export type MenuItemType = {
     link: string
     id: string
     children?: MenuChildItemType[]
+    hasMultiLevel?: boolean
+    fixed?: boolean
 }
 
 export type MobileMenuType = {

@@ -8,31 +8,26 @@ const newFeautureMenu = [
         id: "2",
         title: "Home Appliances Trade-in",
         link: "/",
-        children: [],
     },
     {
         id: "3",
         title: "Game Portal",
         link: "/",
-        children: [],
     },
     {
         id: "4",
         title: "Galaxy OSN+ Offers",
         link: "/",
-        children: [],
     },
     {
         id: "5",
         title: "Trading Now",
         link: "/",
-        children: [],
     },
     {
         id: "6",
         title: "New & Featured",
         link: "/",
-        children: [],
     },
 ]
 
@@ -46,25 +41,21 @@ const offersMenu = [
         id: "8",
         title: "Mobile Offers",
         link: "/",
-        children: [],
     },
     {
         id: "9",
         title: "Television & Sound Devices Offers",
         link: "/",
-        children: [],
     },
     {
         id: "10",
         title: "Home Appliances Offers",
         link: "/",
-        children: [],
     },
     {
         id: "11",
         title: "Monitor Offers",
         link: "/",
-        children: [],
     },
 ]
 
@@ -85,19 +76,16 @@ export const shopMenu = [
         id: "14",
         title: "Exclusive Discount Programs",
         link: "/",
-        children: [],
     },
     {
         id: "15",
         title: "Why buy from Samsung",
         link: "/",
-        children: [],
     },
     {
         id: "16",
         title: "Support",
         link: "/",
-        children: [],
     },
 ]
 
@@ -106,31 +94,26 @@ export const AIMenu = [
         id: "17",
         title: "AI for All",
         link: "/",
-        children: [],
     },
     {
         id: "18",
         title: "Galaxy AI",
         link: "/",
-        children: [],
     },
     {
         id: "19",
         title: "Samsung AI TV",
         link: "/",
-        children: [],
     },
     {
         id: "20",
         title: "Bespoke AI",
         link: "/",
-        children: [],
     },
     {
         id: "21",
         title: "All AI Products",
         link: "/",
-        children: [],
     },
 ]
 
@@ -173,43 +156,59 @@ export const left_menu = [
         title: "Shop",
         link: "/",
         children: shopMenu,
+        hasMultiLevel: true,
+        fixed: true,
     },
     {
         id: "29",
         title: "AI",
         link: "/",
-        children: AIMenu
+        children: AIMenu,
+        hasMultiLevel: false,
+        fixed: false,
     },
     {
         id: "30",
         title: "Mobile",
         link: "/",
-        children: mobilesMenu
+        children: mobilesMenu,
+        hasMultiLevel: false,
+        fixed: false,
     },
     {
         id: "31",
         title: "TV & AV",
         link: "/",
+        hasMultiLevel: false,
+        fixed: false,
     },
     {
         id: "32",
         title: "Home Appliances",
         link: "/",
+        hasMultiLevel: false,
+        fixed: false,
     },
     {
         id: "33",
         title: "Displays",
         link: "/",
+        hasMultiLevel: false,
+        fixed: false,
     },
     {
         id: "34",
         title: "Accessories",
         link: "/",
+        hasMultiLevel: false,
+        fixed: false,
     },
     {
         id: "35",
         title: "SmartThings",
         link: "/",
+        hasMultiLevel: false,
+        fixed: false,
     },
 ]
 
