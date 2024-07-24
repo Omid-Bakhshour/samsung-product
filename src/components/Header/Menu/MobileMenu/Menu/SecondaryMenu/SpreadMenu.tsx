@@ -26,7 +26,7 @@ function SpreadMenu({ menu }: Props) {
 
   return (
     <div 
-        className='w-full flex flex-col'
+        className='w-full flex flex-col cursor-pointer'
         onClick={() => dispatch(setSpreadMenuId(menu.id))}
     >
       {/* title */}

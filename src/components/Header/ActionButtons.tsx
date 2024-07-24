@@ -5,9 +5,11 @@ import { IoIosSearch } from "react-icons/io";
 import { IoCartOutline } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
 import { LuMenu } from "react-icons/lu";
+import { useDispatch } from 'react-redux';
+import { setMobileMenu } from '@/redux/slices/menu'
 
 function ActionButtons() {
-    // const 
+    const dispatch = useDispatch()
     return (
         <div className='w-full xl:w-auto justify-end flex items-center h-full xl:ml-[1.9444444vw]' >
             {/* search */}
@@ -30,7 +32,10 @@ function ActionButtons() {
             </div>
             {/* mobile menu */}
             <div className='header-icon_container mr-2 xl:hidden' >
-                <button className='icon-padding' >
+                <button 
+                    className='icon-padding'
+                    onClick={() => dispatch(setMobileMenu(true))}
+                >
                     <LuMenu className='w-6 h-6 block'  />
                 </button>
             </div>

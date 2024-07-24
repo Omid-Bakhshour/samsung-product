@@ -55,5 +55,5 @@ const menu = createSlice({
     }
 })
 
-export const { setSecondaryMenuId, setSpreadMenuId, resetMenu } = menu.actions;
+export const { setSecondaryMenuId, setSpreadMenuId, resetMenu, setMobileMenu } = menu.actions;
 export default menu.reducer;

@@ -6,7 +6,7 @@ import { GoArrowLeft as BackIcon } from "react-icons/go";
 import { IoSearch  as SearchIcon } from "react-icons/io5";
 import { MdOutlineClose as CloseIcon } from "react-icons/md";
 import { useDispatch, useSelector } from 'react-redux';
-import { setSecondaryMenuId } from '@/redux/slices/menu'
+import { setSecondaryMenuId, resetMenu } from '@/redux/slices/menu'
 
 
 function TopMenu() {
@@ -27,7 +27,10 @@ function TopMenu() {
             <SearchIcon className='w-4 h-4' />
         </button>
         {/* close button */}
-        <button className='t-menu_button' >
+        <button 
+            className='t-menu_button'
+            onClick={() => dispatch(resetMenu())}
+        >
             <CloseIcon className='w-7 h-7' />
         </button>
     </div>
