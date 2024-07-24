@@ -10,12 +10,12 @@ type Props = {
 
 function ModalBackground({
   onClickHandler = () => {},
-  visible,
+  visible = false,
   classname = ""
 }: Props) {
   return (
     <div 
-        className={`fixed top-0 left-0 right-0 bottom-0 bg-black opacity-65 z-[1] ${classname}  ${visible ? "flex" : "hidden"}`}
+        className={`fixed top-0 left-0 right-0 bottom-0 bg-black opacity-65 z-[1] ${classname}  ${visible ? "block" : "hidden"}`}
         onClick={onClickHandler}
     />
   )

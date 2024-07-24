@@ -16,7 +16,11 @@ function CategoryMenuItem({ menu}: Props) {
             onMouseLeave={() => setShowMenu(false)}
         >
             <button className="category-link" >{menu.title}</button>
-            <CategoryBottomMenu menuItems={menu.children || []} show={showMenu} />
+            <CategoryBottomMenu 
+                menuItems={menu.children || []}
+                show={showMenu}
+                setShow={setShowMenu}
+            />
         </li>
     )
 }

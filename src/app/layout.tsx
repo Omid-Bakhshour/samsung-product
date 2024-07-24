@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className='w-full block h-auto' >
-      <body className="w-full flex min-h-screen flex-col">
+      <body className="w-full flex  min-h-screen flex-col bg-white">
         <ReduxProvider>
           <Header />
           {children}
