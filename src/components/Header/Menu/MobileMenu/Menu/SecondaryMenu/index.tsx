@@ -4,7 +4,7 @@ import { MenuItemType } from '@/models/Menu'
 import { RootState } from '@/redux/store'
 import React, { Fragment } from 'react'
 import { useSelector } from 'react-redux'
-import MobileLink from '../MobileMenuLink'
+import MobileLink from '../../../MenuLink'
 import SpreadMenu from './SpreadMenu'
 
 type Props = {

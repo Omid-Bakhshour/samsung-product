@@ -3,7 +3,7 @@
 import { MenuItemType } from '@/models/Menu'
 import React from 'react'
 import MobileMenuButton from './MobileMenuButton'
-import MobileMenuLink from './MobileMenuLink'
+import MobileMenuLink from '../../MenuLink'
 import { useSelector } from 'react-redux'
 import { RootState } from '@/redux/store'
 

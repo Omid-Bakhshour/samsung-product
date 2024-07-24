@@ -3,7 +3,7 @@
 import { MenuChildItemType } from '@/models/Menu'
 import React from 'react'
 import { IoIosArrowDown as DownIcon } from "react-icons/io";
-import MobileLink from '../MobileMenuLink';
+import MobileLink from '../../../MenuLink';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '@/redux/store';
 import { setSpreadMenuId } from '@/redux/slices/menu';

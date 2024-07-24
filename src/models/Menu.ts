@@ -1,9 +1,5 @@
 
 
-export type MenuType = {
-    title: string
-}
-
 export type MenuChildItemType = {
     title: string
     link: string

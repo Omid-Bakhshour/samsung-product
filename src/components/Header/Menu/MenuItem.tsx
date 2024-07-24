@@ -1,16 +1,18 @@
-import { MenuType } from '@/models/Menu'
+"use client"
+
+import { MenuItemType } from '@/models/Menu'
 import React from 'react'
+import CategoryMenuItem from './Category/CategoryMenuItem'
+import CategoryLink from './Category/CategoryLink'
 
 type Props = {
-    menu: MenuType
+    menu: MenuItemType
 }
 
 function MenuItem({menu}: Props) {
-  return (
-    <li className='flex items-center justify-start relative h-full group' >
-        <button className='px-[0.5vw] group-hover:rounded-full group-hover:bg-black group-hover:text-white text-[14px] font-medium leading-[2.222222222222vw]' >{menu.title}</button>
-    </li>
-  )
+  const menuItems = menu.children 
+  const isMenuItemsValid = menuItems && Array.isArray(menuItems) && menuItems.length > 0
+  return isMenuItemsValid ? <CategoryMenuItem menu={menu} />  : <CategoryLink menu={menu} />
 }
 
 export default MenuItem

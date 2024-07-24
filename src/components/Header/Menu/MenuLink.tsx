@@ -7,7 +7,7 @@ type Props = {
   classname?: string
 }
 
-function MobileLink({
+function MenuLink({
   menuItem,
   classname = ""
 }: Props) {
@@ -24,4 +24,4 @@ function MobileLink({
   )
 }
 
-export default MobileLink
+export default MenuLink

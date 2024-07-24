@@ -49,8 +49,12 @@ a {
   .menu-l1 {
     @apply  py-3 pl-6 pr-14 leading-6
   }
-
-  
+  .category-link {
+    @apply px-[0.5vw] group-hover:rounded-full group-hover:bg-black group-hover:text-white text-[14px] font-medium leading-[2.222222222222vw]
+  }
+  .category-container {
+    @apply flex items-center justify-start relative h-full
+  }
 }
 
 .menu-right_animation {
@@ -87,8 +91,5 @@ a {
   -webkit-transition: height .2s cubic-bezier(0.6,0,0.4,1);
   transition: height .2s cubic-bezier(0.6,0,0.4,1);
 }
-
-
-
 
 
