@@ -2,6 +2,7 @@ import { IHeroSlider, SliderType } from '@/models/HeroSlider';
 import React from 'react'
 import ImageSlide from './ImageSlide';
 import VideoSlide from './VideoSlide';
+import SlideContent from './SlideContent';
 
 type Props = {
     slide: IHeroSlider
@@ -20,8 +21,17 @@ function HeroSlide({ slide }: Props) {
     }
 
     return (
-        <div className='w-full block !h-full' >
-            <SlideComponent src={slide.src} alt={slide.content.title} />
+        <div className='w-full block !h-full relative' >
+            {/* image or Video */}
+            <SlideComponent 
+                src={slide.src}
+                alt={slide.content.title} 
+            />
+            {/* content */}
+            <SlideContent  
+               content={slide.content}
+               color={slide.color}
+            />
         </div>
     )
 }

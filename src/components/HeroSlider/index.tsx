@@ -24,7 +24,7 @@ function HeroSlider() {
                     }
 
                     return (
-                        <SwiperSlide className='w-full !h-full block' >
+                        <SwiperSlide className='w-full h-full block' >
                             <HeroSlide key={slide.id} slide={slide} />
                         </SwiperSlide>
                     )

@@ -45,5 +45,4 @@ export type IHeroSlider = {
     duration: number
     src: HeroSrcType
     color: ContentColorType
-
 }
