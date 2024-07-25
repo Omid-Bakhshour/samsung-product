@@ -3,7 +3,6 @@ import React from 'react'
 import ImageSlide from './ImageSlide';
 import VideoSlide from './VideoSlide';
 
-
 type Props = {
     slide: IHeroSlider
 }
@@ -22,7 +21,7 @@ function HeroSlide({ slide }: Props) {
 
     return (
         <div className='w-full block !h-full' >
-            <SlideComponent src={slide.src} />
+            <SlideComponent src={slide.src} alt={slide.content.title} />
         </div>
     )
 }

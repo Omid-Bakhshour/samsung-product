@@ -1,12 +1,12 @@
 import { HeroSrcType } from '@/models/HeroSlider'
-import Image from 'next/image'
 import React from 'react'
 
 type Props = {
   src: HeroSrcType
+  alt?: string
 }
 
-function ImageSlide({ src }: Props) {
+function ImageSlide({ src, alt = "banner" }: Props) {
   const desktopImage = src.desktop
   const mobileImage = src.mobile
   const isDesktopImgValid = desktopImage && desktopImage.length > 0
@@ -16,14 +16,21 @@ function ImageSlide({ src }: Props) {
     <div className='w-full block relative m h-full bg-green' >
       {
         isDesktopImgValid && (
-          <img src={desktopImage} className='w-full hidden md:block  h-full object-cover ' />
+          <img
+            src={desktopImage}
+            className='w-full hidden md:block  h-full object-cover'
+            alt={alt}
+          />
         )
       }
 
       {
         isMobileImgValid && (
-          <img src={mobileImage} className='w-full block md:hidden h-full object-cover ' />
-
+          <img
+            src={mobileImage}
+            className='w-full block md:hidden h-full object-cover '
+            alt={alt}
+          />
         )
       }
     </div>
