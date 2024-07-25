@@ -38,7 +38,7 @@ function SlideContent({ content, color }: Props) {
     return (
         <div className={containerClassname} >
             <h2 className='text-[48px] font-bold text-current' >{title}</h2>
-            <p className='mt-6 text-[18px] leading-[1.33vw] text-current' >{description}</p>
+            <p className='mt-6 text-[18px] leading-[1.33] text-current' >{description}</p>
 
         </div>
     )

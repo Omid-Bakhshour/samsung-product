@@ -31,12 +31,11 @@ export const heroSliders = [
                 mobile : ContentMobilePositionType.TOPCENTER,
                 desktop: ContentDesktopPositionType.LEFTCENTER
             },
-            color: ContentColorType.WHITE,
             showmoreLink : "/",
             buyNowLink: "/"
         },
         duration: 5,
-        color: ContentColorType.BLACK,
+        color: ContentColorType.WHITE,
         src: {
             mobile: "/slider/hero/hero2mobile.webp",
             desktop: "/slider/hero/hero2desktop.webp"
@@ -73,12 +72,11 @@ export const heroSliders = [
                 mobile : ContentMobilePositionType.TOPCENTER,
                 desktop: ContentDesktopPositionType.RIGHTCENTER
             },
-            color: ContentColorType.WHITE,
             showmoreLink : "/",
             buyNowLink: "/"
         },
         duration: 5,
-        color: ContentColorType.BLACK,
+        color: ContentColorType.WHITE,
         src: {
             mobile: "/slider/hero/hero4mobile.mp4",
             desktop: "/slider/hero/hero4desktop.mp4"
@@ -88,7 +86,7 @@ export const heroSliders = [
         id: 5,
         type: SliderType.IMAGE,
         content: {
-            title: "Beat the heat <br>today!",
+            title: "Beat the heat today!",
             description: "Get free Galaxy Buds2 Pro and 5X Samsung Rewards points worth up to AED 433.",
             postion: {
                 mobile : ContentMobilePositionType.TOPCENTER,
