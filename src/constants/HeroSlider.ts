@@ -1,6 +1,6 @@
 import { ContentColorType, ContentDesktopPositionType, ContentMobilePositionType, SliderType } from "@/models/HeroSlider";
 
-const heroSliders = [
+export const heroSliders = [
     {
         id: 1,
         type: SliderType.VIDEO,
@@ -17,8 +17,8 @@ const heroSliders = [
         },
         duration: 5,
         src: {
-            mobile: "slider/hero/hero1mobile.webm",
-            desktop: "slider/hero/hero1desktop.webm"
+            mobile: "/slider/hero/hero1mobile.webm",
+            desktop: "/slider/hero/hero1desktop.webm"
         }
     },
     {
@@ -37,8 +37,8 @@ const heroSliders = [
         },
         duration: 5,
         src: {
-            mobile: "slider/hero/hero2mobile.webp",
-            desktop: "slider/hero/hero2desktop.webp"
+            mobile: "/slider/hero/hero2mobile.webp",
+            desktop: "/slider/hero/hero2desktop.webp"
         }
     },
     {
@@ -57,8 +57,8 @@ const heroSliders = [
         },
         duration: 5,
         src: {
-            mobile: "slider/hero/hero3mobile.webp",
-            desktop: "slider/hero/hero3desktop.webp"
+            mobile: "/slider/hero/hero3mobile.webp",
+            desktop: "/slider/hero/hero3desktop.webp"
         }
     },
     {
@@ -77,8 +77,8 @@ const heroSliders = [
         },
         duration: 5,
         src: {
-            mobile: "slider/hero/hero4mobile.mp4",
-            desktop: "slider/hero/hero4desktop.mp4"
+            mobile: "/slider/hero/hero4mobile.mp4",
+            desktop: "/slider/hero/hero4desktop.mp4"
         }
     },
     {
@@ -97,8 +97,8 @@ const heroSliders = [
         },
         duration: 5,
         src: {
-            mobile: "slider/hero/hero5mobile.webp",
-            desktop: "slider/hero/hero5desktop.webp"
+            mobile: "/slider/hero/hero5mobile.webp",
+            desktop: "/slider/hero/hero5desktop.webp"
         }
     },
 ]
