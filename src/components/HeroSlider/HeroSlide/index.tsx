@@ -1,6 +1,5 @@
 import { IHeroSlider, SliderType } from '@/models/HeroSlider';
 import React from 'react'
-import { SwiperSlide } from 'swiper/react';
 import ImageSlide from './ImageSlide';
 import VideoSlide from './VideoSlide';
 

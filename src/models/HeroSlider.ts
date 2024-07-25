@@ -28,7 +28,6 @@ export type ContentPositionType = {
 export type SliderContentType = {
     title: string
     description: string
-    color: ContentColorType
     showmoreLink: string
     buyNowLink: string
     postion: ContentPositionType
@@ -45,4 +44,6 @@ export type IHeroSlider = {
     content: SliderContentType
     duration: number
     src: HeroSrcType
+    color: ContentColorType
+
 }

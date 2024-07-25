@@ -11,11 +11,11 @@ export const heroSliders = [
                 mobile : ContentMobilePositionType.TOPCENTER,
                 desktop: ContentDesktopPositionType.LEFTCENTER
             },
-            color: ContentColorType.BLACK,
             showmoreLink : "/",
             buyNowLink: "/"
         },
         duration: 5,
+        color: ContentColorType.BLACK,
         src: {
             mobile: "/slider/hero/hero1mobile.webm",
             desktop: "/slider/hero/hero1desktop.webm"
@@ -36,6 +36,7 @@ export const heroSliders = [
             buyNowLink: "/"
         },
         duration: 5,
+        color: ContentColorType.BLACK,
         src: {
             mobile: "/slider/hero/hero2mobile.webp",
             desktop: "/slider/hero/hero2desktop.webp"
@@ -55,6 +56,7 @@ export const heroSliders = [
             showmoreLink : "/",
             buyNowLink: "/"
         },
+        color: ContentColorType.BLACK,
         duration: 5,
         src: {
             mobile: "/slider/hero/hero3mobile.webp",
@@ -76,6 +78,7 @@ export const heroSliders = [
             buyNowLink: "/"
         },
         duration: 5,
+        color: ContentColorType.BLACK,
         src: {
             mobile: "/slider/hero/hero4mobile.mp4",
             desktop: "/slider/hero/hero4desktop.mp4"
@@ -96,6 +99,7 @@ export const heroSliders = [
             buyNowLink: "/"
         },
         duration: 5,
+        color: ContentColorType.BLACK,
         src: {
             mobile: "/slider/hero/hero5mobile.webp",
             desktop: "/slider/hero/hero5desktop.webp"
