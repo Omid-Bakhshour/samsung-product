@@ -126,8 +126,8 @@ a {
 }
 
 .underline-btn:hover:after, .underline-btn:focus:after {
-  -webkit-animation: cta-underline-animation 5.2s both;
-  animation: cta-underline-animation 5.2s both;
+  -webkit-animation: cta-underline-animation .2s both;
+  animation: cta-underline-animation .2s both;
   -webkit-animation-timing-function: cubic-bezier(0.4,0,0.2,1);
   animation-timing-function: cubic-bezier(0.4,0,0.2,1);
   -webkit-animation-delay: .1s;
