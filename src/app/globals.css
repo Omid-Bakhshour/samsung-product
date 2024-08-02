@@ -56,15 +56,22 @@ a {
     @apply flex items-center justify-start relative h-full
   }
   .rounded-btn {
-    @apply flex items-center justify-center whitespace-nowrap rounded-full text-[3.8889vw] md:text-[0.9722vw] leading-[5.27vw] md:leading-[1.31944vw] py-[2.777vw] md:py-[0.69444vw] px-[6.66vw] md:px-[1.66vw]
+    @apply flex items-center justify-center whitespace-nowrap rounded-full text-[3.8889vw] md:text-[0.9722vw] leading-[5.27vw] md:leading-[1.31944vw] py-[2.777vw] md:py-[0.69444vw] px-[6.66vw] md:px-[1.66vw] 
   }
   .rounded-btn_white{
-    @apply bg-white text-black hover:bg-[#ddd] hover:text-[#313131]
-
+    @apply bg-white text-black hover:bg-[#ddd] hover:text-[#313131] 
   }
   .rounded-btn_black{
     @apply bg-black text-white hover:bg-[#555] hover:text-[#eee]
-    
+  }
+  .underline-btn {
+    @apply inline-flex justify-center items-center text-[3.8889vw] md:text-[0.9722vw] leading-[5.27vw] md:leading-[1.31944vw] py-[2.777vw] md:py-[0.69444vw] relative after:left-0 after:right-0 after:absolute after:bottom-[2.2222vw] after:h-[0.55vw] after:md:bottom-[0.55vw] after:md:h-[0.138vw] after:xl:bottom-2 after:xl:h-[2px] 
+  }
+  .underline-btn_white {
+    @apply text-white after:bg-white
+  }
+  .underline-btn_black {
+    @apply text-black after:bg-black
   }
 }
 
@@ -109,4 +116,32 @@ a {
   transition-timing-function: cubic-bezier(0.33,0,0.3,1);
 }
 
+.underline-btn {
+  -webkit-transition-property: color, background-color, border-color, border-bottom-color;
+  transition-property: color, background-color, border-color, border-bottom-color;
+  -webkit-transition-duration: .2s;
+  transition-duration: .2s;
+  -webkit-transition-timing-function: cubic-bezier(0.33,0,0.3,1);
+  transition-timing-function: cubic-bezier(0.33,0,0.3,1);
+}
+
+.underline-btn:hover:after, .underline-btn:focus:after {
+  -webkit-animation: cta-underline-animation 5.2s both;
+  animation: cta-underline-animation 5.2s both;
+  -webkit-animation-timing-function: cubic-bezier(0.4,0,0.2,1);
+  animation-timing-function: cubic-bezier(0.4,0,0.2,1);
+  -webkit-animation-delay: .1s;
+  animation-delay: .1s;
+}
+
+@keyframes cta-underline-animation {
+  0% {
+      visibility: hidden;
+      transform: scaleX(0);
+  }
+  100% {
+      visibility: visible;
+      transform: scaleX(1);
+  }
+}
 
