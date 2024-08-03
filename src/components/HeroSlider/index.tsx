@@ -6,10 +6,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // import { Swiper as SwiperClass } from 'swiper';
 import { heroSliders } from '@/constants/HeroSlider';
 import HeroSlide from './HeroSlide';
+import Indicator from './Indicator';
 
 function HeroSlider() {
   return (
-    <section className='w-full max-w-8xl mx-auto h-full' >
+    <section className='w-full max-w-8xl mx-auto h-full relative' >
+        {/* swiper slider */}
         <Swiper
             loop
             slidesPerView={1}
@@ -31,6 +33,12 @@ function HeroSlider() {
                 })
             }
         </Swiper>
+        {/* indicator */}
+        <Indicator
+           slides={heroSliders}
+           activeIndex={0}
+        />
+        
     </section>
   )
 }
