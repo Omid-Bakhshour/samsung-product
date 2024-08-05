@@ -25,7 +25,7 @@ export const heroSliders = [
         id: 2,
         type: SliderType.IMAGE,
         content: {
-            title: "A Winning team of Experiences",
+            title: "Samsung AI TV",
             description: "Get discounts and benefits worth up to AED 11,499 and a TOD Events pass.",
             postion: {
                 mobile : ContentMobilePositionType.TOPCENTER,
