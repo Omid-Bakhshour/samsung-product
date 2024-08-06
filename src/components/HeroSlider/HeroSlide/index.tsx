@@ -6,6 +6,8 @@ import SlideContent from './SlideContent';
 
 type Props = {
     slide: IHeroSlider
+    isPlaying: boolean
+    activeIndex: number
 }
 
 const blocksType = {
@@ -13,7 +15,11 @@ const blocksType = {
     [SliderType.VIDEO]: VideoSlide,
 }
 
-function HeroSlide({ slide }: Props) {
+function HeroSlide({ 
+    slide,
+    isPlaying,
+    activeIndex,
+}: Props) {
     const type = slide.type
     const SlideComponent = blocksType[type] || null
     if (!SlideComponent) {
@@ -25,7 +31,9 @@ function HeroSlide({ slide }: Props) {
             {/* image or Video */}
             <SlideComponent 
                 src={slide.src}
-                alt={slide.content.title} 
+                alt={slide.content.title}
+                isPlaying={isPlaying}
+                activeIndex={activeIndex}
             />
             {/* content */}
             <SlideContent  
