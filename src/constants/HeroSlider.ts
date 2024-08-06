@@ -1,5 +1,7 @@
 import { ContentColorType, ContentDesktopPositionType, ContentMobilePositionType, SliderType } from "@/models/HeroSlider";
 
+export const AUTOPLAY_TIME_SECONDS = 5 * 1000
+
 export const heroSliders = [
     {
         id: 1,

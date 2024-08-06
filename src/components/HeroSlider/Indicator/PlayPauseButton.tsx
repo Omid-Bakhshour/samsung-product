@@ -1,3 +1,5 @@
+"use client"
+
 import { ContentColorType } from '@/models/HeroSlider'
 import React, { Dispatch, SetStateAction } from 'react'
 import { FaPause as PauseIcon, FaPlay as PlayIcon } from "react-icons/fa6";

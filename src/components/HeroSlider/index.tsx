@@ -11,6 +11,8 @@ import SliderButtons from './SliderButtons';
 function HeroSlider() {
     const swiperRef = useRef<SwiperClass>();
     const [currentSlide, setCurrentSlide] = useState<number>(0);
+    const [isPlaying, setIsPlaying] = useState<boolean>(true)
+
 
     const scrollToSlide = (i: number) => {
       if(swiperRef.current) {
@@ -71,8 +73,10 @@ function HeroSlider() {
            slides={heroSliders}
            activeIndex={currentSlide}
            scrollToSlide={scrollToSlide}
+           next={next}
+           isPlaying={isPlaying}
+           setIsPlaying={setIsPlaying}
         />
-        
     </section>
   )
 }

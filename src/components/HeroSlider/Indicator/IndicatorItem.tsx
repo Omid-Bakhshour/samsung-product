@@ -1,20 +1,52 @@
 import { ContentColorType, IHeroSlider } from '@/models/HeroSlider'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import clx from 'classnames'
+import { AUTOPLAY_TIME_SECONDS } from '@/constants/HeroSlider'
 
 type Props = {
     slide: IHeroSlider
     isActive: boolean
     activeColor: ContentColorType
     scrollToSlide: () => void
-} 
+    isPlaying: boolean
+    next: () => void
+    activeIndex: number
+}
 
 function IndicatorItem({
     slide,
     isActive,
     activeColor,
     scrollToSlide,
-}: Props) {  
+    isPlaying,
+    next,
+    activeIndex
+}: Props) {
+
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    if (isActive && isPlaying) {
+      const increment = 100 / (AUTOPLAY_TIME_SECONDS / 50);
+      const interval = setInterval(() => {
+        setProgress((prevProgress) => {
+          if (prevProgress >= 100) {
+            next();
+            return 0;
+          }
+          return prevProgress + increment;
+        });
+      }, 50);
+      return () => clearInterval(interval);
+    }
+  }, [isActive, isPlaying, next]);
+
+  useEffect(() => {
+    if (isActive) {
+      setProgress(0);
+    }
+  }, [activeIndex, isActive]);
+ 
   const containerClassname = clx(
     "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 block  rounded-full",
     {
@@ -45,6 +77,16 @@ function IndicatorItem({
     }
   )
 
+  const progressLineClassname = clx(
+    "asolute z-[1] left-0 top-0 h-full block",
+    {
+      "bg-black": activeColor === ContentColorType.BLACK,
+      "bg-white": activeColor === ContentColorType.WHITE,
+      "block": isActive,
+      "hidden": !isActive ,
+    }
+  )
+
   return (
     <button 
         className='flex flex-col md:w-[11.11vw] md:min-h-[2.08vw] group'
@@ -56,18 +98,18 @@ function IndicatorItem({
             <span className={containerClassname} />
         </span>
         {/* desktop */}
-        <span className='w-full hidden md:flex flex-col gap-[0.416vw]'>
+        <span className='w-full hidden md:flex flex-col gap-[0.416vw] relative'>
             {/* title */}
             <span className={titleClassname} >{slide.content.title}</span>
             {/* line container */}
             <span className={lineContainerClassname} >
                 {/* duration line */}
-                <span></span>
+                <span 
+                    className={progressLineClassname}
+                    style={{width: `${progress}%`}}
+                />
             </span>
         </span>
-
-
-
     </button>
   )
 }

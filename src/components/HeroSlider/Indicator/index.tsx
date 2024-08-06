@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react'
+import React, { Dispatch, SetStateAction, useMemo, useState } from 'react'
 import IndicatorItem from './IndicatorItem'
 import { ContentColorType, IHeroSlider } from '@/models/HeroSlider'
 import clx from 'classnames'
@@ -8,15 +8,19 @@ type Props = {
   slides: IHeroSlider[]
   activeIndex: number
   scrollToSlide: (index: number) => void
+  next: () => void
+  isPlaying: boolean
+  setIsPlaying: Dispatch<SetStateAction<boolean>>
 }
 
 function Indicator({
   slides,
   activeIndex,
   scrollToSlide,
+  next,
+  isPlaying,
+  setIsPlaying
 }: Props) {
-  const [isPlaying, setIsPlaying] = useState<boolean>(true)
-
   const activeSlideItem = useMemo(() => {
     return slides?.[activeIndex] || slides?.[0]
   }, [slides, activeIndex])
@@ -46,6 +50,9 @@ function Indicator({
                   isActive={isSlideActive}
                   activeColor={activeColor}
                   scrollToSlide={() => scrollToSlide(index)}
+                  next={next}
+                  isPlaying={isPlaying}
+                  activeIndex={activeIndex}
                 />
               )
             })
