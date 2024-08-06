@@ -1,7 +1,8 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 import IndicatorItem from './IndicatorItem'
 import { ContentColorType, IHeroSlider } from '@/models/HeroSlider'
 import clx from 'classnames'
+import PlayPauseButton from './PlayPauseButton'
 
 type Props = {
   slides: IHeroSlider[]
@@ -14,6 +15,7 @@ function Indicator({
   activeIndex,
   scrollToSlide,
 }: Props) {
+  const [isPlaying, setIsPlaying] = useState<boolean>(true)
 
   const activeSlideItem = useMemo(() => {
     return slides?.[activeIndex] || slides?.[0]
@@ -33,7 +35,7 @@ function Indicator({
     <div className='w-full max-w-[1440px] h-[13.333vw] md:h-[5.5555vw] xl:h-20 bottom-0 left-0 absolute z-[10] flex justify-center  ' >
       <div className={containerClassname} >
         {/* items */}
-        <div className='flex items-center py-[1.1111vw] px-[2.2222vw] gap-[1.1111vw] x'  >
+        <div className='flex items-center md:items-end py-[1.1111vw] px-[2.2222vw] gap-[1.1111vw] relative'  >
           {
             slides.map((slide, index) => {
               const isSlideActive = index === activeIndex
@@ -48,9 +50,13 @@ function Indicator({
               )
             })
           }
-        </div>
         {/* control button */}
-
+          <PlayPauseButton
+              color={activeColor}
+              isPlaying={isPlaying}
+              setIsPlaying={setIsPlaying}
+          />
+        </div>
       </div>
 
     </div>
