@@ -8,6 +8,7 @@ type Props = {
     slide: IHeroSlider
     isPlaying: boolean
     activeIndex: number
+    isActive: boolean
 }
 
 const blocksType = {
@@ -19,6 +20,7 @@ function HeroSlide({
     slide,
     isPlaying,
     activeIndex,
+    isActive,
 }: Props) {
     const type = slide.type
     const SlideComponent = blocksType[type] || null
@@ -34,6 +36,7 @@ function HeroSlide({
                 alt={slide.content.title}
                 isPlaying={isPlaying}
                 activeIndex={activeIndex}
+                isActive={isActive}
             />
             {/* content */}
             <SlideContent  

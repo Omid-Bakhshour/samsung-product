@@ -2,11 +2,14 @@
 
 import React, { Fragment, useRef, useState } from 'react'
 import 'swiper/css';
-import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
+import 'swiper/css/effect-fade';
+import { Swiper, SwiperClass, SwiperSlide, } from 'swiper/react';
 import { heroSliders } from '@/constants/HeroSlider';
 import HeroSlide from './HeroSlide';
 import Indicator from './Indicator';
 import SliderButtons from './SliderButtons';
+import { EffectFade } from 'swiper/modules';
+
 
 function HeroSlider() {
     const swiperRef = useRef<SwiperClass>();
@@ -38,6 +41,8 @@ function HeroSlider() {
         <Swiper
             loop
             slidesPerView={1}
+            effect='fade'
+            modules={[EffectFade]}
             onSwiper={(swiper) => {
                 swiperRef.current = swiper;
             }}
@@ -51,6 +56,7 @@ function HeroSlider() {
                     if(!isSlideValid) {
                         return <Fragment key={index} ></Fragment>
                     }
+                    const isSlideActive = index === currentSlide
 
                     return (
                         <SwiperSlide
@@ -61,6 +67,7 @@ function HeroSlider() {
                                 slide={slide}
                                 isPlaying={isPlaying}
                                 activeIndex={currentSlide}
+                                isActive={isSlideActive}
                             />
                         </SwiperSlide>
                     )
