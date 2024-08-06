@@ -8,7 +8,7 @@ type Props = {
   isActive: boolean;
 };
 
-function VideoSlide({ 
+function VideoSlide({
   src,
   isPlaying,
   activeIndex,

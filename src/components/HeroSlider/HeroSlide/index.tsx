@@ -16,7 +16,7 @@ const blocksType = {
     [SliderType.VIDEO]: VideoSlide,
 }
 
-function HeroSlide({ 
+function HeroSlide({
     slide,
     isPlaying,
     activeIndex,
@@ -31,7 +31,7 @@ function HeroSlide({
     return (
         <div className='w-full block !h-full relative' >
             {/* image or Video */}
-            <SlideComponent 
+            <SlideComponent
                 src={slide.src}
                 alt={slide.content.title}
                 isPlaying={isPlaying}
@@ -39,9 +39,9 @@ function HeroSlide({
                 isActive={isActive}
             />
             {/* content */}
-            <SlideContent  
-               content={slide.content}
-               color={slide.color}
+            <SlideContent
+                content={slide.content}
+                color={slide.color}
             />
         </div>
     )

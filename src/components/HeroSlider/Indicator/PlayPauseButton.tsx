@@ -27,7 +27,7 @@ function PlayPauseButton({
     )
 
     return (
-        <button 
+        <button
             className={containerClassname}
             onClick={() => setIsPlaying(!isPlaying)}
         >

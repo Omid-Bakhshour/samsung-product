@@ -57,11 +57,11 @@ function Indicator({
               )
             })
           }
-        {/* control button */}
+          {/* control button */}
           <PlayPauseButton
-              color={activeColor}
-              isPlaying={isPlaying}
-              setIsPlaying={setIsPlaying}
+            color={activeColor}
+            isPlaying={isPlaying}
+            setIsPlaying={setIsPlaying}
           />
         </div>
       </div>
