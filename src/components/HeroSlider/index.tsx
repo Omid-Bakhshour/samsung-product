@@ -51,8 +51,11 @@ function HeroSlider() {
                     }
 
                     return (
-                        <SwiperSlide className='w-full h-full block' >
-                            <HeroSlide key={slide.id} slide={slide} />
+                        <SwiperSlide
+                            className='w-full h-full block'
+                            key={slide.id}
+                        >
+                            <HeroSlide slide={slide}/>
                         </SwiperSlide>
                     )
                 })
