@@ -6,11 +6,13 @@ import clx from 'classnames'
 type Props = {
   slides: IHeroSlider[]
   activeIndex: number
+  scrollToSlide: (index: number) => void
 }
 
 function Indicator({
   slides,
   activeIndex,
+  scrollToSlide,
 }: Props) {
 
   const activeSlideItem = useMemo(() => {
@@ -41,6 +43,7 @@ function Indicator({
                   slide={slide}
                   isActive={isSlideActive}
                   activeColor={activeColor}
+                  scrollToSlide={() => scrollToSlide(index)}
                 />
               )
             })

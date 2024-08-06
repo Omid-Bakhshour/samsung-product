@@ -6,13 +6,14 @@ type Props = {
     slide: IHeroSlider
     isActive: boolean
     activeColor: ContentColorType
+    scrollToSlide: () => void
 } 
 
 function IndicatorItem({
     slide,
     isActive,
-    activeColor
-    
+    activeColor,
+    scrollToSlide,
 }: Props) {  
   const containerClassname = clx(
     "absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2 h-1/2 block  rounded-full",
@@ -45,7 +46,10 @@ function IndicatorItem({
   )
 
   return (
-    <button className='flex flex-col md:w-[11.11vw] md:min-h-[2.08vw] group' >
+    <button 
+        className='flex flex-col md:w-[11.11vw] md:min-h-[2.08vw] group'
+        onClick={scrollToSlide}
+    >
         {/* mobile */}
         <span className='w-[4.44vw] h-[4.44vw] block md:hidden  relative' >
             {/* dot */}

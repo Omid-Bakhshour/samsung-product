@@ -16,9 +16,7 @@ function HeroSlider() {
       if(swiperRef.current) {
         setCurrentSlide(i);
         swiperRef.current.slideToLoop(i)
-  
       }
-  
     };
   
     const next = () => {
@@ -69,6 +67,7 @@ function HeroSlider() {
         <Indicator
            slides={heroSliders}
            activeIndex={currentSlide}
+           scrollToSlide={scrollToSlide}
         />
         
     </section>

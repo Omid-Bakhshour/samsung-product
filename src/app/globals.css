@@ -28,11 +28,9 @@ a {
 @layer components {
   .header-icon_container {
     @apply inline-flex items-center justify-center h-full relative
-
   }
   .header-icon_container .icon-padding {
     @apply p-2 xl:p-[0.5555556vw]
-
   }
   .t-menu_button {
     @apply w-10 h-10 flex items-center justify-center p-2
@@ -74,13 +72,11 @@ a {
     @apply text-black after:bg-black
   }
   .h-s-btn {
-    @apply w-[3.88vw] h-[3.88vw] 2xl:w-10 2xl:h-10 flex items-center justify-center rounded-full bg-[rgba(0,0,0,0.3)] hover:bg-black transition-all transform duration-200 ease-in-out
+    @apply w-[3.88vw] h-[3.88vw] 2xl:w-10 2xl:h-10 hidden md:flex items-center justify-center rounded-full bg-[rgba(0,0,0,0.3)] hover:bg-black transition-all transform duration-200 ease-in-out
   }
-
   .h-s-btn.position {
     @apply absolute  top-1/2 -translate-y-1/2 z-[11]
   }
-
   .h-s-btn .icon {
     @apply w-4 h-4 block text-white
   }
