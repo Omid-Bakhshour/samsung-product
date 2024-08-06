@@ -6,6 +6,7 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { heroSliders } from '@/constants/HeroSlider';
 import HeroSlide from './HeroSlide';
 import Indicator from './Indicator';
+import SliderButtons from './SliderButtons';
 
 function HeroSlider() {
     const swiperRef = useRef<SwiperClass>();
@@ -59,6 +60,11 @@ function HeroSlider() {
                 })
             }
         </Swiper>
+        {/* buttons */}
+        <SliderButtons
+            next={next}
+            previous={previous}
+        />
         {/* indicator */}
         <Indicator
            slides={heroSliders}
