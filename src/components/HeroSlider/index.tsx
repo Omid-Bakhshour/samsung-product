@@ -4,17 +4,27 @@ import React, { Fragment, useRef, useState } from 'react'
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import { Swiper, SwiperClass, SwiperSlide, } from 'swiper/react';
-import { heroSliders } from '@/constants/HeroSlider';
 import HeroSlide from './HeroSlide';
 import Indicator from './Indicator';
 import SliderButtons from './SliderButtons';
 import { EffectFade } from 'swiper/modules';
+import { IHeroSlider } from '@/models/HeroSlider';
 
+type Props = {
+  slides: IHeroSlider[]
+}
 
-function HeroSlider() {
+function HeroSlider({
+  slides
+}: Props) {
   const swiperRef = useRef<SwiperClass>();
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(true)
+  const isSlidesValid = slides && Array.isArray(slides) && slides.length > 0
+
+  if(!isSlidesValid) {
+    return <></>
+  }
 
 
   const scrollToSlide = (i: number) => {
@@ -51,7 +61,7 @@ function HeroSlider() {
         }}
       >
         {
-          heroSliders.map((slide, index) => {
+          slides.map((slide, index) => {
             const isSlideValid = slide && slide.id && slide.id > 0
             if (!isSlideValid) {
               return <Fragment key={index} ></Fragment>
@@ -81,7 +91,7 @@ function HeroSlider() {
       />
       {/* indicator */}
       <Indicator
-        slides={heroSliders}
+        slides={slides}
         activeIndex={currentSlide}
         scrollToSlide={scrollToSlide}
         next={next}
