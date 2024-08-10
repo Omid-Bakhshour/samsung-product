@@ -2,15 +2,15 @@ import { IShowcaseItem } from '@/models/ShowcaseSlider'
 import React from 'react'
 
 type Props = {
-    items: IShowcaseItem[]
+    item: IShowcaseItem
 }
 
-function ShowcaseSlide({
-    items
+function HalfSlideItem({
+    item
 }: Props) {
   return (
-    <div>ShowcaseSlide</div>
+    <div>HalfSlideItem</div>
   )
 }
 
-export default ShowcaseSlide
+export default HalfSlideItem

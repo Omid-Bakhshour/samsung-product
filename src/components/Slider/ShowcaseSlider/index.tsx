@@ -4,7 +4,7 @@ import { IShowcaseType } from '@/models/ShowcaseSlider'
 import React, { useRef, useState } from 'react'
 import Tab from './Tab'
 import { Swiper, SwiperClass, SwiperSlide, } from 'swiper/react';
-import ShowcaseSlide from './ShowcaseSlide';
+import ShowcaseSlide from './slide/ShowcaseSlide';
 
 type Props = {
     slides: IShowcaseType[]
