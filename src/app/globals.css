@@ -103,9 +103,11 @@ a {
     display: none; /* WebKit */
   }
 
-  .showcase-animation {
+  .sc-anim_img {
     @apply transform scale-100 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
   }
+
+
 }
 
 .menu-right_animation {
@@ -176,5 +178,15 @@ a {
       visibility: visible;
       transform: scaleX(1);
   }
+}
+
+.sc-anim_desc {
+  -webkit-transition: opacity cubic-bezier(0.4,0,0.2,1) .3s .1s, visibility cubic-bezier(0.4,0,0.2,1) .3s .1s, bottom cubic-bezier(0.4,0,0.2,1) .3s .1s;
+  transition: opacity cubic-bezier(0.4,0,0.2,1) .3s .1s, visibility cubic-bezier(0.4,0,0.2,1) .3s .1s, bottom cubic-bezier(0.4,0,0.2,1) .3s .1s;
+}
+
+.sc-anim_btn {
+  -webkit-transition: opacity cubic-bezier(0.4,0,0.2,1) .3s .1s, visibility cubic-bezier(0.4,0,0.2,1) .3s .1s, bottom cubic-bezier(0.4,0,0.2,1) .3s .1s;
+  transition: opacity cubic-bezier(0.4,0,0.2,1) .3s .1s, visibility cubic-bezier(0.4,0,0.2,1) .3s .1s, bottom cubic-bezier(0.4,0,0.2,1) .3s .1s;
 }
 

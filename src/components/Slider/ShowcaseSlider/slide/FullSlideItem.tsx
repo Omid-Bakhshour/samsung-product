@@ -28,7 +28,7 @@ function FullSlideItem({
             isDesktopImgValid && (
               <img
                 src={desktopImage}
-                className='w-full hidden md:block  h-full object-cover showcase-animation group-hover:scale-105'
+                className='w-full hidden md:block h-full object-cover sc-anim_img md:group-hover:scale-105'
                 alt={item.title}
               />
             )
@@ -38,7 +38,7 @@ function FullSlideItem({
             isMobileImgValid && (
               <img
                 src={mobileImage}
-                className='w-full block md:hidden h-full object-cover showcase-animation group-hover:scale-105'
+                className='w-full block md:hidden h-full object-cover sc-anim_img md:group-hover:scale-105'
                 alt={item.title}
               />
             )
@@ -55,11 +55,14 @@ function FullSlideItem({
             <span className='text-[3.88vw] md:text-[1.66vw] xl:text-[24px] max-h-[15.83vw] md:max-h-[4.44vw] xl:max-h-16 text-left md:text-center font-bold line-clamp-3' >{item.title}</span>
           </div>
           {/* desc */}
-          <div className='relative max-h-[7.77vw] text-[2.77vw] md:absolute md:bottom-[3.33vw] md:w-[27.77vw] xl:bottom-12 xl:w-[400px] md:text-[0.97vw] xl:text-[14px] md:left-1/2 md:-translate-x-1/2 text-left md:text-center' >
+          <div className='relative max-h-[7.77vw] text-[2.77vw] md:absolute md:bottom-[3.33vw]  xl:bottom-12 md:group-hover:!bottom-[4.72vw] xl:group-hover:!bottom-16 md:w-[27.77vw] xl:w-[400px] md:text-[0.97vw] xl:text-[14px] md:left-1/2 md:-translate-x-1/2 text-left md:text-center opacity-100 md:group-hover:opacity-0 sc-anim_desc' >
             <span>{item.description}</span>
           </div>
         </div>
         {/* buy now button */}
+        <div className='inline-block md:absolute h-[2.77vw] xl:h-10 bottom-[0.27vw] visible opacity-0 md:group-hover:bottom-[1.66vw] xl:group-hover:bottom-6 md:group-hover:visible md:group-hover:opacity-100 xl:b-1 left-1/2 -translate-x-1/2 sc-anim_btn' >
+          <span className='rounded-btn rounded-btn_black' >buy now</span>
+        </div>
       </Link>
     </div>
   )
