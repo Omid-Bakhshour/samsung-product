@@ -102,6 +102,10 @@ a {
   .no-scrollbar::-webkit-scrollbar {
     display: none; /* WebKit */
   }
+
+  .showcase-animation {
+    @apply transform scale-100 transition-transform duration-300 ease-[cubic-bezier(0.4,0,0.2,1)]
+  }
 }
 
 .menu-right_animation {
