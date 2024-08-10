@@ -10,6 +10,7 @@ export default function Home() {
       <HeroSlider slides={heroSliders} />
       {/* title section */}
       <TitleSection title='Shop Offers & Latest Innovation' />
+      {/* show case tab */}
       
     </div>
     
