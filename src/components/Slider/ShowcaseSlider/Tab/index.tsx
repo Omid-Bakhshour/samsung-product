@@ -7,13 +7,13 @@ import TabItem from './TabItem'
 type Props = {
     tabs: IShowcaseType[]
     activeIndex: number
-    setActiveIndex: Dispatch<SetStateAction<number>>
+    scrollToSlide: (i: number) => void
 }
 
 function Tab({
     tabs,
     activeIndex,
-    setActiveIndex
+    scrollToSlide
 }: Props) {
     return (
         <div className='w-full block h-[13.33vw] md:h-[4vw] xl:h-14 pb-[3.61vw] md:pb-0 relative ' >
@@ -25,7 +25,7 @@ function Tab({
                                 key={item.id}
                                 title={item.title}
                                 isActive={ i === activeIndex}
-                                onClick={() => setActiveIndex(i)}
+                                onClick={() => scrollToSlide(i)}
                             />
                         )
                     })

@@ -1,8 +1,6 @@
 "use client"
 
 import React, { Fragment, useRef, useState } from 'react'
-import 'swiper/css';
-import 'swiper/css/effect-fade';
 import { Swiper, SwiperClass, SwiperSlide, } from 'swiper/react';
 import HeroSlide from './HeroSlide';
 import Indicator from './Indicator';
@@ -21,11 +19,9 @@ function HeroSlider({
   const [currentSlide, setCurrentSlide] = useState<number>(0);
   const [isPlaying, setIsPlaying] = useState<boolean>(true)
   const isSlidesValid = slides && Array.isArray(slides) && slides.length > 0
-
   if(!isSlidesValid) {
     return <></>
   }
-
 
   const scrollToSlide = (i: number) => {
     if (swiperRef.current) {

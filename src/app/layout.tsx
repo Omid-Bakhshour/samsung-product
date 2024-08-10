@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Header from '@/components/Header'
 import { ReduxProvider } from '@/redux/ReduxProvider'
+import 'swiper/css';
+import 'swiper/css/effect-fade';
 
 
 export const metadata: Metadata = {
