@@ -32,7 +32,7 @@ function ShowcaseSlider({
                 scrollToSlide={scrollToSlide}
             />
             {/* slider */}
-            <div className='block h-[164.44vw] md:h-[49.16vw] xl:h-[708px] pb-[4.44vw] md:p-0 w-[91.11vw] md:w-full md:max-w-[98.33vw] xl:max-w-[1416px] m mx-auto ' >
+            <div className='block h-[164.44vw] md:h-[49.16vw] xl:h-[708px] pb-[4.44vw] md:p-0 w-[91.11vw] md:w-full md:max-w-[98.33vw] xl:max-w-[1416px] mx-auto ' >
                 <Swiper
                     slidesPerView={1}
                     onSwiper={(swiper) => {
