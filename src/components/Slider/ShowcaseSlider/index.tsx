@@ -4,6 +4,7 @@ import { IShowcaseType } from '@/models/ShowcaseSlider'
 import React, { useRef, useState } from 'react'
 import Tab from './Tab'
 import { Swiper, SwiperClass, SwiperSlide, } from 'swiper/react';
+import ShowcaseSlide from './ShowcaseSlide';
 
 type Props = {
     slides: IShowcaseType[]
@@ -41,6 +42,21 @@ function ShowcaseSlider({
                         setActiveIndex(swiperRef?.current?.realIndex || 0);
                     }}
                 >
+                    {
+                        slides.map((sliderItem) => {
+
+                            return (
+                                <SwiperSlide
+                                    className='w-full h-full block'
+                                    key={sliderItem.id}
+                                >
+                                    <ShowcaseSlide
+                                        items={sliderItem.items}
+                                    />
+                                </SwiperSlide>
+                            )
+                        })
+                    }
 
                 </Swiper>
             </div>
