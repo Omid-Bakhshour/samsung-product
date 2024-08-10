@@ -13,6 +13,7 @@ export type IShowcaseItem = {
 }
 
 export type IShowcaseType = {
+    id: number
     title: string
     items: IShowcaseItem[]
 }

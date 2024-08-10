@@ -51,24 +51,29 @@ const offersItems = [
     },
 ]
 
-export const showcaseSlider = [
+export const showcaseSliders = [
     {
+        id: 1,
         title: "Offers",
         items: offersItems
     },
     {
+        id: 2,
         title: "Mobile",
         items: offersItems
     },
     {
+        id: 3,
         title: "TV & AV",
         items: offersItems
     },
     {
+        id: 4,
         title: "Home Appliances",
         items: offersItems
     },
     {
+        id: 5,
         title: "Computer Monitors",
         items: offersItems
     },

@@ -80,6 +80,9 @@ a {
   .h-s-btn .icon {
     @apply w-4 h-4 block text-white
   }
+  .s-contaner {
+    @apply w-full max-w-8xl relative
+  }
 }
 
 .menu-right_animation {

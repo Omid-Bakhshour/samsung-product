@@ -1,6 +1,8 @@
-import HeroSlider from '@/components/HeroSlider'
+import HeroSlider from '@/components/Slider/HeroSlider'
+import ShowcaseSlider from '@/components/Slider/ShowcaseSlider'
 import TitleSection from '@/components/Text/TitleSection'
 import { heroSliders } from '@/constants/HeroSlider'
+import { showcaseSliders } from '@/constants/ShowcaseSlider'
 import Image from 'next/image'
 
 export default function Home() {
@@ -11,6 +13,7 @@ export default function Home() {
       {/* title section */}
       <TitleSection title='Shop Offers & Latest Innovation' />
       {/* show case tab */}
+      <ShowcaseSlider slides={showcaseSliders} />
       
     </div>
     
