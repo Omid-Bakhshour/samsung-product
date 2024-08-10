@@ -1,5 +1,7 @@
+"use client"
+
 import { IShowcaseType } from '@/models/ShowcaseSlider'
-import React from 'react'
+import React, { useState } from 'react'
 import Tab from './Tab'
 
 type Props = {
@@ -9,15 +11,18 @@ type Props = {
 function ShowcaseSlider({
     slides,
 }: Props) {
-  return (
-    <section className='s-contaner flex flex-col' >
-        {/* tab */}
-        <Tab 
-            tabs={slides}
-        />
-        {/* slider */}
-    </section>
-  )
+    const [activeIndex, setActiveIndex] = useState<number>(0)
+    return (
+        <section className='s-contaner flex flex-col' >
+            {/* tab */}
+            <Tab
+                tabs={slides}
+                activeIndex={activeIndex}
+                setActiveIndex={setActiveIndex}
+            />
+            {/* slider */}
+        </section>
+    )
 }
 
 export default ShowcaseSlider

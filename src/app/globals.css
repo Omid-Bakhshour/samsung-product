@@ -81,7 +81,26 @@ a {
     @apply w-4 h-4 block text-white
   }
   .s-contaner {
-    @apply w-full max-w-8xl relative
+    @apply w-full max-w-8xl relative mx-auto
+  }
+  .tab-line {
+    @apply w-full h-[2px] bg-black;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .tab-line-active {
+    transform: scaleX(1);
+  }
+
+  .no-scrollbar {
+    @apply overflow-auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* WebKit */
   }
 }
 
