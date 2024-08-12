@@ -108,6 +108,20 @@ a {
   }
 
 
+
+  .sc-img_container {
+    @apply absolute left-0 bottom-0 top-0 w-full h-full rounded-[5.55vw] md:rounded-[1.38vw] xl:rounded-[20px] overflow-hidden  
+  }
+
+  .sc-small .sc-img_container {
+    @apply bg-[#f4f4f4]  
+  }
+
+  .sc-small .sc-img_container {
+    @apply pt-[8.33vw] md:pt-[2.77vw] xl:pt-10 px-[7.22vw] md:px-[5.9vw] xl:px-[85px] pb-[13.88vw] md:pb-[9vw] xl:pb-[130px]
+  }
+
+
 }
 
 .menu-right_animation {
@@ -189,4 +203,5 @@ a {
   -webkit-transition: opacity cubic-bezier(0.4,0,0.2,1) .3s .1s, visibility cubic-bezier(0.4,0,0.2,1) .3s .1s, bottom cubic-bezier(0.4,0,0.2,1) .3s .1s;
   transition: opacity cubic-bezier(0.4,0,0.2,1) .3s .1s, visibility cubic-bezier(0.4,0,0.2,1) .3s .1s, bottom cubic-bezier(0.4,0,0.2,1) .3s .1s;
 }
+
 

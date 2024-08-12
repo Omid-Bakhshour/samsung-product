@@ -23,7 +23,7 @@ function FullSlideItem({
         className='relative inline-block w-[86.66vw] h-[48.88vw] md:w-full md:h-full'
       >
         {/* img */}
-        <div className='absolute left-0 bottom-0 top-0 w-full h-full rounded-[5.55vw] md:rounded-[1.38vw] xl:rounded-[20px] !overflow-hidden  ' >
+        <div className='sc-img_container' >
           {
             isDesktopImgValid && (
               <img
