@@ -58,6 +58,7 @@ function VideoSlide({
           src={desktopSrc}
           muted
           autoPlay
+          playsInline
         />
       )}
 
@@ -68,6 +69,7 @@ function VideoSlide({
           src={mobileSrc}
           muted
           autoPlay
+          playsInline
         />
       )}
     </div>
