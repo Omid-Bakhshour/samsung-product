@@ -1,7 +1,5 @@
 import { ContentColorType } from "@/models/HeroSlider"
 
-
-
 export const mobileItems = [
     {
         id: 1,
@@ -11,11 +9,10 @@ export const mobileItems = [
         learnMore: "/",
         buyNow: "/",
         image: {
-            mobile: "",
-            desktop: "",
+            mobile: "kf-m-1.jpg",
+            desktop: "kf-d-1.jpg",
         },
         color: ContentColorType.BLACK,
-
     },
     {
         id: 2,
@@ -25,11 +22,10 @@ export const mobileItems = [
         learnMore: "/",
         buyNow: "/",
         image: {
-            mobile: "",
-            desktop: "",
+            mobile: "kf-m-2.jpg",
+            desktop: "kf-d-2.jpg",
         },
         color: ContentColorType.BLACK,
-
     },
     {
         id: 3,
@@ -39,11 +35,10 @@ export const mobileItems = [
         learnMore: "",
         buyNow: "",
         image: {
-            mobile: "",
-            desktop: "",
+            mobile: "kf-m-3.jpg",
+            desktop: "kf-d-3.jpg",
         },
         color: ContentColorType.BLACK,
-
     },
     {
         id: 4,
@@ -53,11 +48,10 @@ export const mobileItems = [
         learnMore: "/",
         buyNow: "/",
         image: {
-            mobile: "",
-            desktop: "",
+            mobile: "kf-m-4.jpg",
+            desktop: "kf-d-4.jpg",
         },
         color: ContentColorType.WHITE,
-
     },
     {
         id: 5,
@@ -67,15 +61,12 @@ export const mobileItems = [
         learnMore: "",
         buyNow: "/",
         image: {
-            mobile: "",
-            desktop: "",
+            mobile: "kf-m-5.jpg",
+            desktop: "kf-d-5.jpg",
         },
         color: ContentColorType.BLACK,
-
     },
 ]
-
-
 
 export const mobileKeyFeature = {
     title: "Mobile",
