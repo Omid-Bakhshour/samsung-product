@@ -11,7 +11,7 @@ function ShowcaseSlide({
     items
 }: Props) {
     return (
-        <div className='flex flex-wrap justify-center flex-col relative h-[164.44vw] md:h-[49.16vw] xl:h-[708px] pb-[4.44vw] md:p-0'>
+        <div className='flex flex-wrap justify-center felx-row md:flex-col relative h-[164.44vw] md:h-[49.16vw] xl:h-[708px] pb-[4.44vw] md:p-0'>
             {
                 items.map((item, i) => {
                     if (i == 0) {

@@ -1,9 +1,10 @@
 import HeroSlider from '@/components/Slider/HeroSlider'
+import KeyFeatureSlider from '@/components/Slider/KeyFeatureSlider'
 import ShowcaseSlider from '@/components/Slider/ShowcaseSlider'
 import TitleSection from '@/components/Text/TitleSection'
 import { heroSliders } from '@/constants/HeroSlider'
+import { mobileKeyFeature } from '@/constants/keyFeatureSlider'
 import { showcaseSliders } from '@/constants/ShowcaseSlider'
-import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -14,8 +15,8 @@ export default function Home() {
       <TitleSection title='Shop Offers & Latest Innovation' />
       {/* show case tab */}
       <ShowcaseSlider slides={showcaseSliders} />
-      
+      {/* mobile key feature slider */}
+      <KeyFeatureSlider slider={mobileKeyFeature} />
     </div>
-    
   )
 }

@@ -14,5 +14,5 @@ export type IKeyFeatureItem = {
 
 export type KeyFeature = {
     title: string
-    items: any[]
+    items: IKeyFeatureItem[]
 }
