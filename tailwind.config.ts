@@ -19,6 +19,10 @@ const config: Config = {
       maxWidth: {
         '8xl': '1440px',
       },
+      dropShadow: {
+        'tab-black': "0 0 3px rgba(255,255,255,0.75)",
+        'tab-white': "0 0 3px rgba(0, 0, 0, 0.75)",
+      }
     },
   },
   plugins: [],
