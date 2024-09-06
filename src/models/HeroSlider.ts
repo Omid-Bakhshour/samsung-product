@@ -30,7 +30,7 @@ export type SliderContentType = {
     description: string
     showmoreLink: string
     buyNowLink: string
-    postion: ContentPositionType
+    postion?: ContentPositionType
 }
 
 export type HeroSrcType = {

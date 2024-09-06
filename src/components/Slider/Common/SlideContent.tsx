@@ -6,9 +6,10 @@ import Link from 'next/link'
 type Props = {
     content: SliderContentType
     color: ContentColorType
+    classname?: string
 }
 
-function SlideContent({ content, color }: Props) {
+function SlideContent({ content, color, classname }: Props) {
     if (!content) {
         return <></>
     }
@@ -16,21 +17,6 @@ function SlideContent({ content, color }: Props) {
     const description = content.description
     const showMoreLink = content.showmoreLink
     const buyNowLink = content.buyNowLink
-    const position = content.postion
-    const mobilePosition = position.mobile || ContentMobilePositionType.TOPCENTER
-    const desktopPosition = position.desktop || ContentDesktopPositionType.LEFTCENTER
-
-    const containerClassname = clx(
-        "absolute w-[86.66vw] md:w-[43vw] xl:w-[620px] flex flex-col z-[10]",
-        {
-            "left-1/2 -translate-x-1/2 bottom-[11.11vw] text-center": mobilePosition == ContentMobilePositionType.BOOTTOMCENTER,
-            "left-1/2 right-auto -translate-x-1/2 top-[11.11vw] text-center": mobilePosition == ContentMobilePositionType.TOPCENTER,
-            "md:left-20 md:translate-x-0 md:-translate-y-1/2 md:top-1/2 md:text-left": desktopPosition == ContentDesktopPositionType.LEFTCENTER,
-            "md:right-20 md:left-auto md:translate-x-0 md:-translate-y-1/2 md:top-1/2 md:text-left": desktopPosition == ContentDesktopPositionType.RIGHTCENTER,
-            "text-white": color === ContentColorType.WHITE,
-            "text-black": color === ContentColorType.BLACK,
-        }
-    )
 
     const buynowClassname = clx(
         "rounded-btn",
@@ -48,7 +34,7 @@ function SlideContent({ content, color }: Props) {
         }
     )
     return (
-        <div className={containerClassname} >
+        <div className={classname} >
             <h2 className='text-[8.3333vw]  md:text-[48px] font-bold text-current' >{title}</h2>
             <p className='mt-[4.44vw]  md:mt-6 text-[3.88vw] md:text-[18px] leading-[1.33] text-current' >{description}</p>
             {/* buttons */}

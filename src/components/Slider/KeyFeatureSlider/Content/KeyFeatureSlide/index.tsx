@@ -1,10 +1,12 @@
 import { IKeyFeatureItem } from '@/models/KeyFeatureSlider'
 import React from 'react'
 import KeyFeatureImage from './KeyFeatureImage'
+import SlideContent from './KeyFeatureContent'
+import { ContentColorType } from '@/models/HeroSlider'
 
 type Props = {
     sliderItem: IKeyFeatureItem
-    activeColor: string
+    activeColor: ContentColorType
 }
 
 function KeyFeatureSlide({
@@ -19,7 +21,10 @@ function KeyFeatureSlide({
          alt={sliderItem.tabLabel}
       />
       {/* slide content */}
-        
+      <SlideContent
+          activeColor={activeColor}
+          sliderItem={sliderItem}
+      />
     </div>
   )
 }
