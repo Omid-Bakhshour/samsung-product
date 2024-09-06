@@ -17,7 +17,7 @@ function Tab({
 }: Props) {
     return (
         <div className='w-full block h-[13.33vw] md:h-[4vw] xl:h-14 pb-[3.61vw] md:pb-0 relative ' >
-            <ul className='no-scrollbar h-full flex flex-row items-center md:justify-center my-0 mx-auto' >
+            <ul className='tab-container' >
                 {
                     tabs.map((item, i) => {
                         return (

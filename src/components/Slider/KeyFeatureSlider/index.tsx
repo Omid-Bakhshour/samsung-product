@@ -5,6 +5,7 @@ import React, { useMemo, useRef, useState } from 'react'
 import { Swiper, SwiperClass, SwiperSlide, } from 'swiper/react';
 import Title from './Content/Title';
 import KeyFeatureSlide from './Content/KeyFeatureSlide';
+import Tab from './Tab';
 
 type Props = {
     slider: KeyFeature
@@ -24,17 +25,30 @@ function KeyFeatureSlider({ slider }: Props) {
         return activeSlideItem?.color || ""
     }, [activeSlideItem])
 
+    const scrollToSlide = (i: number) => {
+        if (swiperRef.current) {
+            setCurrentSlide(i);
+            swiperRef.current.slideToLoop(i)
+        }
+    };
+
 
     return (
         <section className='s-contaner' >
             {/* title & tab */}
-            <div className='absolute left-0 right-0 top-0 z-[1]' >
+            <div className='absolute left-0 right-0 top-0 z-[2]' >
                 {/* title */}
                 <Title
                     title={title}
                     color={activeColor}
                 />
                 {/* tab */}
+                <Tab
+                   tabs={slides.map((slide) => slide.tabLabel)}
+                   activeTab={currentSlide}
+                   setActiveTab={scrollToSlide}
+                   activeColor={activeColor}
+                />
 
             </div>
             {/* swiper slider */}

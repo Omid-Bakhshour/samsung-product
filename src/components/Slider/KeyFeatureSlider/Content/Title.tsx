@@ -14,8 +14,8 @@ function Title({
     const titleClassnames = clx(
         "mt-[8.88vw] md:mt-[3.33vw] xl:mt-12 text-[7.22vw] md:text-[2.63vw] xl:text-[38px] leading-[1.33] md:leading-[1.2] px-[6.66vw] md:px-[1.66vw] xl:px-6 font-bold text-center",
         {
-            "text-black": color === ContentColorType.WHITE,
-            "text-white": color === ContentColorType.BLACK,
+            "text-white": color === ContentColorType.WHITE,
+            "text-black": color === ContentColorType.BLACK,
         }
     )
     return (
