@@ -13,7 +13,6 @@ function KeyFeatureContent({
     sliderItem,
     activeColor,
 }: Props) {
-
     if (!sliderItem) {
         return <></>
     }
@@ -26,7 +25,6 @@ function KeyFeatureContent({
     const containerClassname = clx(
         "absolute left-0 bottom-[15vw] md:bottom-[3.33vw] xl:bottom-11 px-[6.66vw] md:px-[1.66vw] xl:px-6 w-full flex flex-col items-center justify-center z-[2]",
         {
-
             "text-white": activeColor === ContentColorType.WHITE,
             "text-black": activeColor === ContentColorType.BLACK,
         }
@@ -50,7 +48,7 @@ function KeyFeatureContent({
 
     return (
         <div className={containerClassname} >
-            <h2 className='mb-[2.22vw] md:mb-[0.55vw] xl:mb-2  text-[8.3333vw] md:text-[3.33vw] xl:text-[48px] font-bold text-current text-center' >{title}</h2>
+            <h2 className='mb-[2.22vw] md:mb-[0.55vw] xl:mb-2 text-[8.3333vw] md:text-[3.33vw] xl:text-[48px] font-bold text-current text-center' >{title}</h2>
             {
                 description && description.length > 0 && (
                     <p className='mb-[2.22vw] md:mb-[0.55vw] xl:mb-2 text-[3.88vw] md:text-[1.25vw] xl:text-[18px] leading-[1.33] text-current text-center' >{description}</p>
@@ -58,22 +56,31 @@ function KeyFeatureContent({
                 )
             }
             {/* buttons */}
-            <div className=' flex flex-col-reverse md:flex-row gap-[2.22222vw] md:gap-5 items-center justify-center ' >
+            <div className='flex flex-col-reverse md:flex-row gap-[2.22222vw] md:gap-5 items-center justify-center' >
                 {/* show more */}
-                <Link
-                    href={showMoreLink}
-                    className={learnMoreClassname}
-                >
-                    {"Learn more"}
-                </Link>
-                {/* buy now */}
-                <Link
-                    href={buyNowLink}
-                    className={buynowClassname}
-                >
-                    {"Buy now"}
-                </Link>
+                {
+                    showMoreLink && (
+                        <Link
+                            href={showMoreLink}
+                            className={learnMoreClassname}
+                        >
+                            {"Learn more"}
+                        </Link>
 
+                    )
+                }
+                {/* buy now */}
+                {
+                    buyNowLink && (
+                        <Link
+                            href={buyNowLink}
+                            className={buynowClassname}
+                        >
+                            {"Buy now"}
+                        </Link>
+
+                    )
+                }
             </div>
         </div>
     )

@@ -3,7 +3,7 @@ import KeyFeatureSlider from '@/components/Slider/KeyFeatureSlider'
 import ShowcaseSlider from '@/components/Slider/ShowcaseSlider'
 import TitleSection from '@/components/Text/TitleSection'
 import { heroSliders } from '@/constants/HeroSlider'
-import { mobileKeyFeature } from '@/constants/keyFeatureSlider'
+import { keyFeatures } from '@/constants/keyFeatureSlider'
 import { showcaseSliders } from '@/constants/ShowcaseSlider'
 
 export default function Home() {
@@ -15,8 +15,14 @@ export default function Home() {
       <TitleSection title='Shop Offers & Latest Innovation' />
       {/* show case tab */}
       <ShowcaseSlider slides={showcaseSliders} />
-      {/* mobile key feature slider */}
-      <KeyFeatureSlider slider={mobileKeyFeature} />
+      {/*key features slider */}
+      {
+        keyFeatures.map((keyFeature, index) => {
+          return (
+            <KeyFeatureSlider slider={keyFeature} key={index} />
+          )
+        })
+      }
     </div>
   )
 }
