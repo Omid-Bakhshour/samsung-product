@@ -3,7 +3,7 @@ import HeaderUtility from './HeaderUtility'
 
 function FloatingHeader() {
   return (
-    <div className='w-full flex items-center justify-between gap-2 border-y border-floating-header' >
+    <div className='w-full flex items-center justify-between gap-2' >
         {/* head line */}
         <div className='w-auto' />
         {/* utility */}
