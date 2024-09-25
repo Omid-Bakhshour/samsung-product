@@ -37,7 +37,7 @@ function FloatingLayout({ children }: Props) {
                 <div
                     className={clx(
                         'w-full h-auto block',
-                        isFixed ? 'fixed top-0 bg-black' : 'bg-black'
+                        isFixed ? 'fixed top-0' : ''
                     )}
                 >
                     {children}

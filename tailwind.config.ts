@@ -22,6 +22,9 @@ const config: Config = {
       dropShadow: {
         'tab-black': "0 0 3px rgba(255,255,255,0.75)",
         'tab-white': "0 0 3px rgba(0, 0, 0, 0.75)",
+      },
+      borderColor : {
+        'floating-header': "rgba(0,0,0,0.2)",
       }
     },
   },
