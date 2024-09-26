@@ -225,6 +225,11 @@ a {
   transition: opacity cubic-bezier(0.4,0,0.2,1) .3s .1s, visibility cubic-bezier(0.4,0,0.2,1) .3s .1s, bottom cubic-bezier(0.4,0,0.2,1) .3s .1s;
 }
 
+.h-l-animation {
+  transition: max-height 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+
 
 
 
