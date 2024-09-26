@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 import FloatingLayout from './FloatingLayout'
 import FloatingHeader from './FloatingHeader'

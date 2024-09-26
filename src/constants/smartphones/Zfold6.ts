@@ -18,3 +18,35 @@ export const zfold6UtilitiyLinks = [
         link: "/reviews/"
     }
 ]
+
+export const headlineList = [
+    {
+        id: 1,
+        label: "Galaxy Z Fold6",
+        link: "/"
+    },
+    {
+        id: 2,
+        label: "Galaxy Z Flip6",
+        link: "/"
+    },
+    {
+        id: 3,
+        label: "Galaxy Watch Ultra",
+        link: "/"
+    }, {
+        id: 4,
+        label: "Galaxy Watch7",
+        link: "/"
+    },
+    {
+        id: 5,
+        label: "Galaxy Buds3 Pro",
+        link: "/"
+    },
+    {
+        id: 6,
+        label: "See all Foldables",
+        link: "/"
+    },
+]

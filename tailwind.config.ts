@@ -23,6 +23,9 @@ const config: Config = {
         'tab-black': "0 0 3px rgba(255,255,255,0.75)",
         'tab-white': "0 0 3px rgba(0, 0, 0, 0.75)",
       },
+      boxShadow: {
+        'list-shadow': "0 4px 10px 0 rgba(0,0,0,0.2)",
+      },
       borderColor : {
         'floating-header': "rgba(0,0,0,0.2)",
       }

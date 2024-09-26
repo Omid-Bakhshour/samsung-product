@@ -31,7 +31,7 @@ function HeaderUtility() {
             <div className='h-[15.55vw] md:h-12 flex items-center pr-[6.66vw] md:pr-6' >
                 <Link 
                    href={'/'}
-                   className='bg-[#2189ff] max-w-[47.77vw] text-[3.33vw] md:text-[14px] py-[2.22vw] px-[4.44vw] md:py-2.5 md:px-6 font-bold text-white md:h-10 flex items-center justify-center rounded-[20px] ' 
+                   className='bg-[#2189ff] max-w-[47.77vw] text-[3.33vw] md:text-[14px] py-[2.22vw] px-[4.44vw] md:py-2.5 md:px-6 font-bold text-white md:h-10 flex items-center justify-center rounded-full' 
                 >
                     <span>Buy now</span>
                 </Link>
