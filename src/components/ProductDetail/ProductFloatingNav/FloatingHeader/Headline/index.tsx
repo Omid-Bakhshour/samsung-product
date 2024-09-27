@@ -18,7 +18,7 @@ function Headline() {
 
   return (
     <h2 
-       className='relative inline-flex flex-1 gap-2 md:flex-none h-[15.55vw] md:h-14 pr-[4.44vw] md:pr-0 pl-[6.66vw] md:pl-6 items-center justify-between md:justify-start cursor-pointer'
+       className='relative inline-flex flex-1 gap-2 md:flex-none h-[15.55vw] md:h-14 pr-[4.44vw] md:pr-0 pl-[5.55vw] md:pl-5 items-center justify-between md:justify-start cursor-pointer'
        onClick={() => setOpenList(!isListOpen)}
     >
       {/* title */}

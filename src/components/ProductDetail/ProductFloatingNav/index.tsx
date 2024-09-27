@@ -1,6 +1,7 @@
 import React from 'react'
 import FloatingLayout from './FloatingLayout'
 import FloatingHeader from './FloatingHeader'
+import FloatingBottomNavigation from './FloatingBottomNavigation'
 
 function ProductFloatingNav() {
   return (
@@ -10,7 +11,7 @@ function ProductFloatingNav() {
           {/* header */}
           <FloatingHeader />
           {/* navigation menu */}
-          <div className='h-10 w-full block' />
+          <FloatingBottomNavigation/>
         </div>
       </div>
     </FloatingLayout>

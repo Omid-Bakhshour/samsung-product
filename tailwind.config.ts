@@ -28,6 +28,9 @@ const config: Config = {
       },
       borderColor : {
         'floating-header': "rgba(0,0,0,0.2)",
+      },
+      colors: {
+        'primary-blue': "#2189ff"
       }
     },
   },
